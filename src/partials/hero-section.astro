@@ -8,20 +8,32 @@ const { personal } = portfolioData;
 const buildDate = new Date().toISOString().replace("T", " ").slice(0, 19);
 ---
 
-<section class="relative min-h-[90vh] flex items-center py-20 px-6 md:px-12 lg:px-24 border-b-4 border-black overflow-hidden">
+<section
+  class="relative min-h-[90vh] flex items-center py-20 border-b-4 border-black overflow-hidden"
+>
   <HeroDecorations client:load />
   <CustomCursor client:load />
 
   <!-- Exposed HTML tags -->
-  <span class="absolute top-4 left-6 font-mono text-xs text-black/20 select-none pointer-events-none z-0">&lt;section class="hero"&gt;</span>
-  <span class="absolute bottom-4 right-6 font-mono text-xs text-black/20 select-none pointer-events-none z-0">&lt;/section&gt;</span>
+  <span
+    class="absolute top-4 left-6 font-mono text-xs text-black/20 select-none pointer-events-none z-0"
+    >&lt;section class="hero"&gt;</span
+  >
+  <span
+    class="absolute bottom-4 right-6 font-mono text-xs text-black/20 select-none pointer-events-none z-0"
+    >&lt;/section&gt;</span
+  >
 
   <!-- Build timestamp -->
-  <span class="absolute top-4 right-6 font-mono text-[10px] text-black/30 select-none pointer-events-none z-0">
+  <span
+    class="absolute top-4 right-6 font-mono text-[10px] text-black/30 select-none pointer-events-none z-0"
+  >
     BUILD {buildDate} UTC
   </span>
 
-  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 w-full max-w-7xl mx-auto">
+  <div
+    class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 w-full max-w-7xl mx-auto px-4 md:px-8"
+  >
     <div class="flex flex-col justify-center">
       <HeroTextReveal
         client:load
@@ -47,12 +59,23 @@ const buildDate = new Date().toISOString().replace("T", " ").slice(0, 19);
 
     <div class="flex flex-col items-center justify-center lg:items-end gap-8">
       <!-- Terminal card -->
-      <div class="w-full max-w-md border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-border-dark text-bg-base overflow-hidden">
-        <div class="flex items-center gap-2 px-4 py-3 bg-border-dark border-b-2 border-bg-base/20">
-          <div class="w-3 h-3 rounded-full bg-primary border border-bg-base/30"></div>
-          <div class="w-3 h-3 rounded-full bg-secondary border border-bg-base/30"></div>
-          <div class="w-3 h-3 rounded-full bg-accent border border-bg-base/30"></div>
-          <span class="ml-2 font-mono text-xs text-bg-base/60">~/daily-stack</span>
+      <div
+        class="w-full max-w-md border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-border-dark text-bg-base overflow-hidden"
+      >
+        <div
+          class="flex items-center gap-2 px-4 py-3 bg-border-dark border-b-2 border-bg-base/20"
+        >
+          <div class="w-3 h-3 rounded-full bg-primary border border-bg-base/30">
+          </div>
+          <div
+            class="w-3 h-3 rounded-full bg-secondary border border-bg-base/30"
+          >
+          </div>
+          <div class="w-3 h-3 rounded-full bg-accent border border-bg-base/30">
+          </div>
+          <span class="ml-2 font-mono text-xs text-bg-base/60"
+            >~/daily-stack</span
+          >
         </div>
         <div class="p-5 font-mono text-sm space-y-2">
           {
@@ -66,56 +89,64 @@ const buildDate = new Date().toISOString().replace("T", " ").slice(0, 19);
 
       <!-- Barcode decoration -->
       <div class="w-full max-w-md flex items-center gap-4">
-        <svg class="h-16 flex-1" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect x="2" y="0" width="3" height="50" fill="#1e1e1e"/>
-          <rect x="7" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="10" y="0" width="4" height="50" fill="#1e1e1e"/>
-          <rect x="16" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="20" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="23" y="0" width="3" height="50" fill="#1e1e1e"/>
-          <rect x="28" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="31" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="35" y="0" width="4" height="50" fill="#1e1e1e"/>
-          <rect x="41" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="44" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="48" y="0" width="3" height="50" fill="#1e1e1e"/>
-          <rect x="53" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="56" y="0" width="4" height="50" fill="#1e1e1e"/>
-          <rect x="62" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="66" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="69" y="0" width="3" height="50" fill="#1e1e1e"/>
-          <rect x="74" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="78" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="81" y="0" width="4" height="50" fill="#1e1e1e"/>
-          <rect x="87" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="90" y="0" width="3" height="50" fill="#1e1e1e"/>
-          <rect x="95" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="99" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="102" y="0" width="4" height="50" fill="#1e1e1e"/>
-          <rect x="108" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="112" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="115" y="0" width="3" height="50" fill="#1e1e1e"/>
-          <rect x="120" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="123" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="127" y="0" width="4" height="50" fill="#1e1e1e"/>
-          <rect x="133" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="136" y="0" width="3" height="50" fill="#1e1e1e"/>
-          <rect x="141" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="145" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="148" y="0" width="4" height="50" fill="#1e1e1e"/>
-          <rect x="154" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="158" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="161" y="0" width="3" height="50" fill="#1e1e1e"/>
-          <rect x="166" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="169" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="173" y="0" width="4" height="50" fill="#1e1e1e"/>
-          <rect x="179" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="182" y="0" width="3" height="50" fill="#1e1e1e"/>
-          <rect x="187" y="0" width="2" height="50" fill="#1e1e1e"/>
-          <rect x="191" y="0" width="1" height="50" fill="#1e1e1e"/>
-          <rect x="194" y="0" width="4" height="50" fill="#1e1e1e"/>
+        <svg
+          class="h-16 flex-1"
+          viewBox="0 0 200 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <rect x="2" y="0" width="3" height="50" fill="#1e1e1e"></rect>
+          <rect x="7" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="10" y="0" width="4" height="50" fill="#1e1e1e"></rect>
+          <rect x="16" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="20" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="23" y="0" width="3" height="50" fill="#1e1e1e"></rect>
+          <rect x="28" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="31" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="35" y="0" width="4" height="50" fill="#1e1e1e"></rect>
+          <rect x="41" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="44" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="48" y="0" width="3" height="50" fill="#1e1e1e"></rect>
+          <rect x="53" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="56" y="0" width="4" height="50" fill="#1e1e1e"></rect>
+          <rect x="62" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="66" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="69" y="0" width="3" height="50" fill="#1e1e1e"></rect>
+          <rect x="74" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="78" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="81" y="0" width="4" height="50" fill="#1e1e1e"></rect>
+          <rect x="87" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="90" y="0" width="3" height="50" fill="#1e1e1e"></rect>
+          <rect x="95" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="99" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="102" y="0" width="4" height="50" fill="#1e1e1e"></rect>
+          <rect x="108" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="112" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="115" y="0" width="3" height="50" fill="#1e1e1e"></rect>
+          <rect x="120" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="123" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="127" y="0" width="4" height="50" fill="#1e1e1e"></rect>
+          <rect x="133" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="136" y="0" width="3" height="50" fill="#1e1e1e"></rect>
+          <rect x="141" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="145" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="148" y="0" width="4" height="50" fill="#1e1e1e"></rect>
+          <rect x="154" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="158" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="161" y="0" width="3" height="50" fill="#1e1e1e"></rect>
+          <rect x="166" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="169" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="173" y="0" width="4" height="50" fill="#1e1e1e"></rect>
+          <rect x="179" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="182" y="0" width="3" height="50" fill="#1e1e1e"></rect>
+          <rect x="187" y="0" width="2" height="50" fill="#1e1e1e"></rect>
+          <rect x="191" y="0" width="1" height="50" fill="#1e1e1e"></rect>
+          <rect x="194" y="0" width="4" height="50" fill="#1e1e1e"></rect>
         </svg>
-        <span class="font-mono text-[9px] text-black/40 whitespace-nowrap">FSR-2024-PORTFOLIO</span>
+        <span class="font-mono text-[9px] text-black/40 whitespace-nowrap"
+          >FSR-2024-PORTFOLIO</span
+        >
       </div>
     </div>
   </div>

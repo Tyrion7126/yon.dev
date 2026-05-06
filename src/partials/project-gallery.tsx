@@ -60,109 +60,122 @@ export function ProjectGallery() {
 
   return (
     <section id="projects" className="bg-bg-base border-b-4 border-black">
-      <div className="py-20 px-6 md:px-12 lg:px-24">
-        <h2 className="font-heading mb-4">Featured Projects</h2>
-        <p className="text-fluid-body font-body text-border-dark mb-2 max-w-2xl">
-          A selection of projects I&apos;ve architected and built.
-        </p>
-        <p className="text-sm font-mono text-border-dark/70 mb-12">
-          <kbd className="px-1.5 py-0.5 border-2 border-black bg-bg-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs">
-            j
-          </kbd>
-          {" / "}
-          <kbd className="px-1.5 py-0.5 border-2 border-black bg-bg-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs">
-            k
-          </kbd>
-          {" to navigate · "}
-          <kbd className="px-1.5 py-0.5 border-2 border-black bg-bg-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs">
-            Enter
-          </kbd>
-          {" to open · "}
-          <kbd className="px-1.5 py-0.5 border-2 border-black bg-bg-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs">
-            Esc
-          </kbd>
-          {" to close"}
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: index * 0.1,
-                type: "spring",
-                stiffness: 300,
-                damping: 25,
-              }}
-            >
-              <Card
-                ref={(el) => {
-                  cardRefs.current[index] = el;
-                }}
-                accent={project.themeColor}
-                tabIndex={0}
-                role="button"
-                aria-label={`View project: ${project.title}`}
-                onClick={() => openModal(project)}
-                onFocus={() => setActiveIndex(index)}
-                className={`cursor-pointer h-full flex flex-col p-6 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-100 ${
-                  activeIndex === index
-                    ? "ring-4 ring-secondary shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -translate-x-1 -translate-y-1"
-                    : ""
-                }`}
-              >
-                <h3 className="text-2xl font-heading font-bold mb-2">{project.title}</h3>
-                <p className="text-sm text-border-dark font-body mb-4 flex-1">
-                  {project.shortDescription}
-                </p>
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.techStack.slice(0, 4).map((tech) => (
-                    <Badge key={tech}>{tech}</Badge>
-                  ))}
-                </div>
-              </Card>
-            </motion.div>
-          ))}
+      {/* Industrial Marquee Heading */}
+      <div
+        className="border-y-4 border-black bg-primary overflow-hidden py-4 select-none"
+        aria-hidden="true"
+      >
+        <div className="flex animate-marquee whitespace-nowrap">
+          <span className="font-heading text-[clamp(2rem,5vw,4rem)] font-black italic uppercase tracking-tight text-black">
+            {
+              "// DEPLOYED ARCHITECTURE // FEATURED WORK // DEPLOYED ARCHITECTURE // FEATURED WORK // DEPLOYED ARCHITECTURE // FEATURED WORK // DEPLOYED ARCHITECTURE // FEATURED WORK // "
+            }
+          </span>
         </div>
+      </div>
+      <h2 className="sr-only">Featured Projects</h2>
 
-        <Dialog open={!!selectedProject} onClose={closeModal}>
-          {selectedProject && (
-            <DialogContent accent={selectedProject.themeColor}>
-              <DialogClose onClose={closeModal} />
+      <div className="py-16 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto w-full">
+          <p className="text-sm font-mono text-border-dark/70 mb-12">
+            <kbd className="px-1.5 py-0.5 border-2 border-black bg-bg-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs">
+              j
+            </kbd>
+            {" / "}
+            <kbd className="px-1.5 py-0.5 border-2 border-black bg-bg-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs">
+              k
+            </kbd>
+            {" to navigate · "}
+            <kbd className="px-1.5 py-0.5 border-2 border-black bg-bg-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs">
+              Enter
+            </kbd>
+            {" to open · "}
+            <kbd className="px-1.5 py-0.5 border-2 border-black bg-bg-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs">
+              Esc
+            </kbd>
+            {" to close"}
+          </p>
 
-              <h3 className="text-3xl font-heading font-bold mb-4 pr-16">
-                {selectedProject.title}
-              </h3>
-              <p className="text-fluid-body font-body text-border-dark mb-6 leading-relaxed">
-                {selectedProject.fullDescription}
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: index * 0.1,
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 25,
+                }}
+              >
+                <Card
+                  ref={(el) => {
+                    cardRefs.current[index] = el;
+                  }}
+                  accent={project.themeColor}
+                  tabIndex={0}
+                  role="button"
+                  aria-label={`View project: ${project.title}`}
+                  onClick={() => openModal(project)}
+                  onFocus={() => setActiveIndex(index)}
+                  className={`cursor-pointer h-full flex flex-col p-6 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-100 ${
+                    activeIndex === index
+                      ? "ring-4 ring-secondary shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -translate-x-1 -translate-y-1"
+                      : ""
+                  }`}
+                >
+                  <h3 className="text-2xl font-heading font-bold mb-2">{project.title}</h3>
+                  <p className="text-sm text-border-dark font-body mb-4 flex-1">
+                    {project.shortDescription}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-auto">
+                    {project.techStack.slice(0, 4).map((tech) => (
+                      <Badge key={tech}>{tech}</Badge>
+                    ))}
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
 
-              <div className="mb-6">
-                <h4 className="text-sm font-mono font-bold uppercase tracking-wider mb-3 text-border-dark/70">
-                  Tech Stack
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {selectedProject.techStack.map((tech) => (
-                    <Badge key={tech} variant="primary">
-                      {tech}
-                    </Badge>
-                  ))}
+          <Dialog open={!!selectedProject} onClose={closeModal}>
+            {selectedProject && (
+              <DialogContent accent={selectedProject.themeColor}>
+                <DialogClose onClose={closeModal} />
+
+                <h3 className="text-3xl font-heading font-bold mb-4 pr-16">
+                  {selectedProject.title}
+                </h3>
+                <p className="text-fluid-body font-body text-border-dark mb-6 leading-relaxed">
+                  {selectedProject.fullDescription}
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-mono font-bold uppercase tracking-wider mb-3 text-border-dark/70">
+                    Tech Stack
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedProject.techStack.map((tech) => (
+                      <Badge key={tech} variant="primary">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              <div className="flex gap-4 flex-wrap">
-                {selectedProject.link && (
-                  <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
-                    <Button variant="default">View Live ↗</Button>
-                  </a>
-                )}
-                <Button variant="secondary">GitHub Repo →</Button>
-              </div>
-            </DialogContent>
-          )}
-        </Dialog>
+                <div className="flex gap-4 flex-wrap">
+                  {selectedProject.link && (
+                    <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                      <Button variant="default">View Live ↗</Button>
+                    </a>
+                  )}
+                  <Button variant="secondary">GitHub Repo →</Button>
+                </div>
+              </DialogContent>
+            )}
+          </Dialog>
+        </div>
       </div>
     </section>
   );

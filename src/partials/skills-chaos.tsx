@@ -70,31 +70,53 @@ export function SkillsChaos() {
         {"</section>"}
       </div>
 
-      <div className="py-16 px-6 md:px-12 lg:px-24">
-        <div className="flex items-center gap-4 mb-8">
-          <h2 className="font-heading">Skills</h2>
-          <span className="font-mono text-xs border-4 border-black bg-bg-base px-3 py-1 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-            DRAG TO REARRANGE
-          </span>
-        </div>
-
-        <div
-          ref={constraintRef}
-          className="relative min-h-[500px] border-4 border-black bg-bg-base shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 overflow-hidden"
-        >
-          <div className="flex flex-wrap gap-4 items-start">
-            {allItems.map((skill, i) => (
-              <SkillTag
-                key={skill}
-                skill={skill}
-                index={i}
-                color={tagColors[i % tagColors.length]}
-              />
-            ))}
+      <div className="py-16 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto w-full">
+          <h2 className="sr-only">Skills</h2>
+          <div className="flex flex-wrap items-end gap-1 mb-10 select-none">
+            {["S", "K", "I", "L", "L", "S"].map((letter, i) => {
+              if (letter === " ") return <div key={`sp-${i}`} className="w-4" />;
+              const colors = ["bg-bg-base", "bg-accent", "bg-primary", "bg-secondary"];
+              const rotations = [
+                "-rotate-3",
+                "rotate-2",
+                "-rotate-1",
+                "rotate-3",
+                "rotate-1",
+                "-rotate-2",
+              ];
+              return (
+                <span
+                  key={`${letter}-${i}`}
+                  className={`${colors[i % colors.length]} ${rotations[i % rotations.length]} font-heading text-[clamp(2rem,5vw,4.5rem)] font-black leading-none border-4 border-black px-3 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] inline-block`}
+                >
+                  {letter}
+                </span>
+              );
+            })}
+            <span className="font-mono text-xs border-4 border-black bg-bg-base px-3 py-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] ml-4 self-center">
+              DRAG TO REARRANGE
+            </span>
           </div>
 
-          <div className="absolute bottom-4 right-4 font-mono text-[10px] text-black/30 select-none pointer-events-none">
-            {allItems.length} items · framer-motion physics
+          <div
+            ref={constraintRef}
+            className="relative min-h-[500px] border-4 border-black bg-bg-base shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 overflow-hidden"
+          >
+            <div className="flex flex-wrap gap-4 items-start">
+              {allItems.map((skill, i) => (
+                <SkillTag
+                  key={skill}
+                  skill={skill}
+                  index={i}
+                  color={tagColors[i % tagColors.length]}
+                />
+              ))}
+            </div>
+
+            <div className="absolute bottom-4 right-4 font-mono text-[10px] text-black/30 select-none pointer-events-none">
+              {allItems.length} items · framer-motion physics
+            </div>
           </div>
         </div>
       </div>
