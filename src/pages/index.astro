@@ -3,9 +3,10 @@ import Layout from "../layouts/layout.astro";
 import HeroSection from "../partials/hero-section.astro";
 import MarqueeBanner from "../partials/marquee-banner.astro";
 import ExperienceTimeline from "../partials/experience-timeline.astro";
-import SkillsMatrix from "../partials/skills-matrix.astro";
 import FooterCta from "../partials/footer-cta.astro";
 import { ProjectGallery } from "../partials/project-gallery";
+import { SkillsChaos } from "../partials/skills-chaos";
+import { RawModeToggle } from "../components/raw-mode-toggle";
 import { portfolioData } from "../data/portfolio-data";
 
 const { personal } = portfolioData;
@@ -15,12 +16,13 @@ const { personal } = portfolioData;
   title={`${personal.name} — ${personal.role}`}
   description={personal.summary}
 >
+  <RawModeToggle client:load />
   <main>
     <HeroSection />
     <MarqueeBanner />
     <ExperienceTimeline />
     <ProjectGallery client:load />
-    <SkillsMatrix />
+    <SkillsChaos client:load />
   </main>
   <FooterCta />
 </Layout>

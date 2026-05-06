@@ -4,7 +4,8 @@ export interface Experience {
   role: string;
   location: string;
   period: string;
-  achievements: string[];
+  description: string;
+  status?: "ACTIVE" | "ARCHIVED";
 }
 
 export interface Project {
@@ -66,88 +67,70 @@ export const portfolioData: PortfolioData = {
       company: "Lintasarta",
       role: "Frontend Engineer",
       location: "Jakarta",
-      period: "Jul 2024 – Present",
-      achievements: [
-        "Lead Frontend Engineer for the AI Marketplace, managing the architecture and release cycles for both Buyer and Seller platforms.",
-        "Pioneered the implementation of SonarQube in the CI/CD pipeline, enforcing strict code quality standards and reducing technical debt across the entire codebase.",
-        "Executed comprehensive SEO strategies, successfully optimizing page structure and metadata to achieve Rank #1 on search engines for key business keywords.",
-        "Optimized Docker build processes by reducing image size by 83% (3GB to 500MB) and reduced CSS bundle size by 30%, significantly improving deployment efficiency and load times.",
-        "Architected the client-side state management using TanStack Query (React Query), implementing optimistic updates and caching strategies that reduced API server load by 40%.",
-        "Served as the Primary Code Reviewer and mentor for new hires, ensuring adherence to best practices and streamlining the onboarding process.",
-        "Integrated Midtrans and Xendit payment gateways, facilitating secure transactions for high-volume traffic.",
-      ],
+      period: "2024 – PRESENT",
+      status: "ACTIVE",
+      description:
+        "Led the frontend architecture for the B2B AI Marketplace, managing release cycles for both Buyer and Seller platforms. Drove massive performance optimizations—83% Docker image reduction (3GB→500MB), 30% CSS bundle cut, and Rank #1 SEO—while enforcing strict code quality via SonarQube and reducing API server load by 40% through TanStack Query caching strategies. Mentored new hires and integrated Midtrans/Xendit payment gateways for high-volume traffic.",
     },
     {
       id: "exp-pln",
-      company: "PLN Icon Plus (Contract)",
+      company: "PLN Icon Plus",
       role: "Frontend Engineer",
       location: "Jakarta",
-      period: "Feb 2024 – Jun 2024",
-      achievements: [
-        "Developed the New VCubicles platform, a complex administrative dashboard used for internal data management.",
-        "Architected the frontend using Vue.js and Bootstrap, prioritizing high-performance rendering for large datasets.",
-        "Engineered reusable components to handle complex multi-step forms and large-scale data tables with client-side sorting and filtering.",
-      ],
+      period: "2024",
+      status: "ARCHIVED",
+      description:
+        "Built the VCubicles administrative dashboard for internal data management using Vue.js. Engineered high-performance rendering for large datasets with reusable components handling complex multi-step forms and data tables with client-side sorting and filtering.",
     },
     {
       id: "exp-planetsurf",
       company: "PlanetSurf",
       role: "Frontend Engineer",
       location: "Jakarta",
-      period: "Nov 2023 – Feb 2024",
-      achievements: [
-        "Modernized internal web apps by migrating legacy modules to React and Next.js, optimizing user experience and maintainability.",
-        "Collaborated with backend teams to design robust API schemas for seamless frontend integration.",
-        "Implemented responsive design principles, ensuring 100% compatibility across mobile and desktop devices.",
-      ],
+      period: "2023 – 2024",
+      status: "ARCHIVED",
+      description:
+        "Modernized internal web applications by migrating legacy modules to React and Next.js. Designed robust API schemas with backend teams and implemented 100% responsive compatibility across all device classes.",
     },
     {
       id: "exp-dealls",
       company: "Dealls",
-      role: "Software Engineer - Web Platform",
+      role: "Software Engineer – Web",
       location: "Jakarta",
-      period: "Feb 2023 – Sep 2023",
-      achievements: [
-        "Collaborated on building a job portal platform used by over 100,000 users, creating scalable frontend components that enhanced usability.",
-        "Participated in product releases and code reviews with 5 frontend engineers, maintaining high code quality standards.",
-        "Led the development of multiple key features, translating product requirements into technical implementations.",
-      ],
+      period: "2023",
+      status: "ARCHIVED",
+      description:
+        "Built scalable frontend components for a job portal serving 100,000+ users. Led feature development across a 5-engineer team, maintaining high code quality through rigorous code reviews and product-driven technical implementations.",
     },
     {
       id: "exp-unfold",
       company: "Unfold Solution",
       role: "Frontend Developer",
       location: "Melbourne (Remote)",
-      period: "Oct 2022 – Jan 2023",
-      achievements: [
-        "Developed the Muslim Xplore web application with React.js and Next.js, achieving optimal user experience.",
-        "Expedited UI development by introducing Styled Components and integrating Tailwind CSS.",
-        "Collaborated with cross-functional international teams to deliver features in an Agile environment.",
-      ],
+      period: "2022 – 2023",
+      status: "ARCHIVED",
+      description:
+        "Developed the Muslim Xplore web application with React.js and Next.js for an international remote team. Accelerated UI delivery by introducing Styled Components and Tailwind CSS in a cross-functional Agile environment.",
     },
     {
       id: "exp-medika",
-      company: "PT. Medika Digitalisasi Indonesia",
+      company: "Medika Digital",
       role: "Frontend Developer",
       location: "Pontianak",
-      period: "Dec 2021 – Jul 2022",
-      achievements: [
-        "Architected and delivered the MVP frontend for Medicord using Next.js in under 6 months.",
-        "Introduced a monorepo architecture, significantly enhancing development efficiency for shared components.",
-        "Integrated Nx Workspace, accelerating the addition of new features and standardizing build tools.",
-      ],
+      period: "2021 – 2022",
+      status: "ARCHIVED",
+      description:
+        "Architected and shipped the Medicord MVP frontend in under 6 months using Next.js. Introduced a monorepo architecture with Nx Workspace, standardizing build tooling and dramatically accelerating feature development across shared components.",
     },
     {
       id: "exp-kst",
-      company: "PT. Kita Super Tim",
+      company: "Kita Super Tim",
       role: "Frontend Developer",
       location: "Pontianak",
-      period: "Dec 2020 – Jun 2021",
-      achievements: [
-        "Developed frontend applications for learning management systems using React.js and Redux.",
-        "Refactored legacy codebases to modern ES6+ syntax, improving code readability and reducing technical debt.",
-        "Implemented strict API integration patterns to handle complex data states efficiently.",
-      ],
+      period: "2020 – 2021",
+      status: "ARCHIVED",
+      description:
+        "Built LMS frontend applications with React.js and Redux. Refactored legacy codebases to modern ES6+ patterns, reducing technical debt and implementing strict API integration for complex state management.",
     },
   ],
   projects: [

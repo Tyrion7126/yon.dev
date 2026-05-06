@@ -22,8 +22,16 @@ const containerVariants = {
 };
 
 export function HeroTextReveal({ name, role, summary }: HeroTextRevealProps) {
+  const [firstName, ...rest] = name.split(" ");
+  const lastName = rest.join(" ");
+
   return (
-    <motion.div variants={containerVariants} initial="hidden" animate="visible">
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      className="relative"
+    >
       <div className="overflow-hidden mb-4">
         <motion.p
           variants={lineVariants}
@@ -34,13 +42,24 @@ export function HeroTextReveal({ name, role, summary }: HeroTextRevealProps) {
         </motion.p>
       </div>
 
-      <div className="overflow-hidden mb-4">
+      <div className="overflow-hidden mb-1">
         <motion.h1
           variants={lineVariants}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
           className="font-heading bg-bg-base inline px-2 leading-[1.15] box-decoration-clone"
         >
-          {name}
+          {firstName}
+        </motion.h1>
+      </div>
+
+      <div className="overflow-hidden mb-4">
+        <motion.h1
+          variants={lineVariants}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className="font-heading inline px-2 leading-[1.15] box-decoration-clone text-transparent"
+          style={{ WebkitTextStroke: "3px #1e1e1e" }}
+        >
+          {lastName}
         </motion.h1>
       </div>
 

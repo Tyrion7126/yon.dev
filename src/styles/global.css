@@ -42,28 +42,11 @@
   }
 
   body {
-    cursor: none;
-  }
-
-  body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
     background-color: #faf9f6;
     background-image: radial-gradient(circle, #1e1e1e 1px, transparent 1px);
     background-size: 24px 24px;
     background-position: 0 0;
-  }
-
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0.15;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    cursor: none;
   }
 
   h1,
@@ -102,5 +85,34 @@
     outline: 3px dashed #ffc900;
     outline-offset: 3px;
     border-radius: 0;
+  }
+}
+
+@layer utilities {
+  body.raw-mode {
+    background-image: none;
+    background-color: white;
+  }
+
+  body.raw-mode * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  body.raw-mode .bg-primary {
+    background-color: white;
+  }
+
+  body.raw-mode .bg-secondary {
+    background-color: white;
+  }
+
+  body.raw-mode .bg-accent {
+    background-color: white;
+    color: black;
+  }
+
+  body.raw-mode .bg-bg-base {
+    background-color: white;
   }
 }
