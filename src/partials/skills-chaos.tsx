@@ -88,7 +88,7 @@ export function SkillsChaos() {
               return (
                 <span
                   key={`${letter}-${i}`}
-                  className={`${colors[i % colors.length]} ${rotations[i % rotations.length]} font-heading text-[clamp(2rem,5vw,4.5rem)] font-black leading-none border-4 border-black px-3 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] inline-block`}
+                  className={`${colors[i % colors.length]} ${rotations[i % rotations.length]} font-heading text-[clamp(1.5rem,5vw,4.5rem)] font-black leading-none border-2 md:border-4 border-black px-2 py-1 md:px-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] inline-block`}
                 >
                   {letter}
                 </span>
