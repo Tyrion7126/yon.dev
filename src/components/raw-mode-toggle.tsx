@@ -31,7 +31,7 @@ export const RawModeToggle = () => {
           aria-pressed={isRaw}
         >
           <motion.div
-            className="absolute top-0.5 w-6 h-full bg-black"
+            className="absolute top-0.5 w-6 h-full bg-border-dark"
             animate={{ left: isRaw ? "calc(100% - 28px)" : "2px" }}
             transition={{ type: "spring", stiffness: 500, damping: 30 }}
           />
@@ -44,16 +44,16 @@ export const RawModeToggle = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0 }}
           transition={{ type: "spring", stiffness: 400, damping: 25 }}
-          className="fixed inset-0 z-40 bg-white overflow-auto p-8 pt-24"
+          className="fixed inset-0 z-40 bg-bg-base overflow-auto p-8 pt-24"
         >
           <div className="max-w-5xl mx-auto">
             <div className="flex items-center gap-4 mb-8">
               <h2 className="font-mono text-2xl font-bold">portfolio-data.ts</h2>
-              <span className="font-mono text-xs border-2 border-black px-2 py-1 bg-secondary">
+              <span className="font-mono text-xs border-2 border-border-dark px-2 py-1 bg-secondary">
                 RAW JSON
               </span>
             </div>
-            <pre className="font-mono text-xs leading-relaxed bg-border-dark text-bg-base p-8 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-x-auto whitespace-pre-wrap">
+            <pre className="font-mono text-xs leading-relaxed bg-border-dark text-bg-base p-8 border-4 border-border-dark shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-x-auto whitespace-pre-wrap">
               {JSON.stringify(portfolioData, null, 2)}
             </pre>
           </div>

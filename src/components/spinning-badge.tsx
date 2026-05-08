@@ -10,9 +10,16 @@ export const SpinningBadge = () => {
         <defs>
           <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
         </defs>
-        <circle cx="100" cy="100" r="90" fill="#FFC900" stroke="#1e1e1e" strokeWidth="6" />
-        <circle cx="100" cy="100" r="60" fill="#faf9f6" stroke="#1e1e1e" strokeWidth="4" />
-        <text className="font-mono" fontSize="14" fontWeight="bold" fill="#1e1e1e">
+        <circle cx="100" cy="100" r="90" fill="#FFC900" stroke="currentColor" strokeWidth="6" />
+        <circle
+          cx="100"
+          cy="100"
+          r="60"
+          fill="var(--color-bg-base)"
+          stroke="currentColor"
+          strokeWidth="4"
+        />
+        <text className="font-mono" fontSize="14" fontWeight="bold" fill="currentColor">
           <textPath href="#circlePath" startOffset="0%">
             4+ YEARS EXPERIENCE • DEPLOYING SCALE • ZERO COMPROMISE •
           </textPath>
@@ -24,7 +31,7 @@ export const SpinningBadge = () => {
           className="font-heading"
           fontSize="28"
           fontWeight="bold"
-          fill="#1e1e1e"
+          fill="currentColor"
         >
           FSR
         </text>

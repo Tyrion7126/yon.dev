@@ -12,7 +12,7 @@ export const DraggableTerminal = () => {
         boxShadow: "16px 16px 0px 0px rgba(30,30,30,1)",
         cursor: "grabbing",
       }}
-      className="absolute right-4 md:right-8 bottom-[-5%] md:bottom-10 w-[340px] md:w-[400px] border-4 border-black bg-border-dark text-bg-base overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] cursor-grab z-30"
+      className="absolute right-4 md:right-8 bottom-[-5%] md:bottom-10 w-[340px] md:w-[400px] border-4 border-black bg-terminal-bg text-[#f0ede6] overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] cursor-grab z-30"
     >
       {/* Window 95-style title bar */}
       <div className="flex items-center justify-between px-3 py-2 bg-secondary border-b-4 border-black">
@@ -35,9 +35,9 @@ export const DraggableTerminal = () => {
       </div>
 
       {/* Terminal content */}
-      <div className="p-5 font-mono text-sm space-y-1.5 bg-border-dark">
+      <div className="p-5 font-mono text-sm space-y-1.5 bg-terminal-bg">
         {terminalStack.map((line) => (
-          <p key={line} className="text-bg-base leading-relaxed">
+          <p key={line} className="text-[#f0ede6] leading-relaxed">
             {line}
           </p>
         ))}
@@ -45,8 +45,8 @@ export const DraggableTerminal = () => {
       </div>
 
       {/* Bottom grab indicator */}
-      <div className="px-3 py-1.5 border-t-2 border-bg-base/20 bg-border-dark">
-        <span className="font-mono text-[9px] text-bg-base/40 uppercase tracking-widest">
+      <div className="px-3 py-1.5 border-t-2 border-[rgba(240,237,230,0.2)] bg-terminal-bg">
+        <span className="font-mono text-[9px] text-[rgba(240,237,230,0.4)] uppercase tracking-widest">
           drag me
         </span>
       </div>

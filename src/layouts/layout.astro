@@ -8,6 +8,7 @@ import "@fontsource-variable/jetbrains-mono";
 import "../styles/global.css";
 import SeoHead from "../components/seo-head.astro";
 import { ScrollToTop } from "../components/scroll-to-top";
+import { ThemeToggle } from "../components/theme-toggle";
 
 interface Props {
   title: string;
@@ -22,6 +23,19 @@ const { title, description, keywords, type } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
+    <script is:inline>
+      (function () {
+        try {
+          const theme = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          if (theme === "dark" || (!theme && prefersDark)) {
+            document.documentElement.classList.add("dark");
+          }
+        } catch (_) {}
+      })();
+    </script>
     <SeoHead
       title={title}
       description={description}
@@ -34,5 +48,6 @@ const { title, description, keywords, type } = Astro.props;
   >
     <slot />
     <ScrollToTop client:load />
+    <ThemeToggle client:load />
   </body>
 </html>

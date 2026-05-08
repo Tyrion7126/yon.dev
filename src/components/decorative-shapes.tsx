@@ -19,7 +19,7 @@ export const BrutalistStar = ({ className = "" }: { className?: string }) => {
       <path
         d="M40 0L46.5 30.5L80 40L46.5 49.5L40 80L33.5 49.5L0 40L33.5 30.5L40 0Z"
         fill="#FF90E8"
-        stroke="black"
+        stroke="currentColor"
         strokeWidth="4"
       />
     </motion.svg>
@@ -45,7 +45,7 @@ export const BrutalistStarLarge = ({ className = "" }: { className?: string }) =
       <path
         d="M40 0L46.5 30.5L80 40L46.5 49.5L40 80L33.5 49.5L0 40L33.5 30.5L40 0Z"
         fill="#FFC900"
-        stroke="black"
+        stroke="currentColor"
         strokeWidth="4"
       />
     </motion.svg>
@@ -65,14 +65,14 @@ export const HandDrawnArrow = ({ className = "" }: { className?: string }) => {
     >
       <path
         d="M5 45C25 50 55 48 85 35C95 30 105 24 115 18"
-        stroke="black"
+        stroke="currentColor"
         strokeWidth="4"
         strokeLinecap="round"
         fill="none"
       />
       <path
         d="M100 8L118 17L105 30"
-        stroke="black"
+        stroke="currentColor"
         strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -95,7 +95,7 @@ export const ZigzagLine = ({ className = "" }: { className?: string }) => {
     >
       <path
         d="M0 10L10 2L20 18L30 2L40 18L50 2L60 18L70 2L80 18L90 2L100 18L110 2L120 18L130 2L140 18L150 2L160 18L170 2L180 18L190 2L200 10"
-        stroke="black"
+        stroke="currentColor"
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -120,8 +120,8 @@ export const CircleDoodle = ({ className = "" }: { className?: string }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="30" cy="30" r="26" stroke="black" strokeWidth="4" fill="#23A094" />
-      <circle cx="30" cy="30" r="12" stroke="black" strokeWidth="3" fill="none" />
+      <circle cx="30" cy="30" r="26" stroke="currentColor" strokeWidth="4" fill="#23A094" />
+      <circle cx="30" cy="30" r="12" stroke="currentColor" strokeWidth="3" fill="none" />
     </motion.svg>
   );
 };

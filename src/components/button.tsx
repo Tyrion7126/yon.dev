@@ -9,7 +9,7 @@ export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 const variantStyles: Record<string, string> = {
   default: "bg-primary text-black",
   secondary: "bg-secondary text-black",
-  accent: "bg-accent text-white",
+  accent: "bg-accent text-black",
   ghost: "bg-bg-base shadow-none border-2",
 };
 
