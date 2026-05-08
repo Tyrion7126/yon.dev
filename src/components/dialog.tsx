@@ -3,11 +3,11 @@ import { X } from "lucide-react";
 import { type ReactNode, useCallback, useEffect, useRef } from "react";
 import { cn } from "../lib/utils";
 
-interface DialogProps {
+type DialogProps = {
   open: boolean;
   onClose: () => void;
   children: ReactNode;
-}
+};
 
 export const Dialog = ({ open, onClose, children }: DialogProps) => {
   return (
@@ -75,11 +75,11 @@ const DialogOverlay = ({ onClose }: { onClose: () => void }) => {
   );
 };
 
-interface DialogContentProps {
+type DialogContentProps = {
   children: ReactNode;
   className?: string;
   accent?: string;
-}
+};
 
 export const DialogContent = ({ children, className, accent }: DialogContentProps) => {
   return (
@@ -97,10 +97,10 @@ export const DialogContent = ({ children, className, accent }: DialogContentProp
   );
 };
 
-interface DialogCloseProps {
+type DialogCloseProps = {
   onClose: () => void;
   className?: string;
-}
+};
 
 export const DialogClose = ({ onClose, className }: DialogCloseProps) => {
   return (

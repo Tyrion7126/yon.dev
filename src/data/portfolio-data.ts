@@ -1,4 +1,4 @@
-export interface Experience {
+export type Experience = {
   id: string;
   company: string;
   role: string;
@@ -6,9 +6,9 @@ export interface Experience {
   period: string;
   description: string;
   status?: "ACTIVE" | "ARCHIVED";
-}
+};
 
-export interface Project {
+export type Project = {
   id: string;
   title: string;
   link?: string;
@@ -16,17 +16,17 @@ export interface Project {
   fullDescription: string;
   techStack: string[];
   themeColor: string;
-}
+};
 
-export interface Certification {
+export type Certification = {
   id: string;
   title: string;
   issuer: string;
   date: string;
   credentialLink: string;
-}
+};
 
-export interface PortfolioData {
+export type PortfolioData = {
   personal: {
     name: string;
     role: string;
@@ -35,6 +35,8 @@ export interface PortfolioData {
     website: string;
     github: string;
     linkedin: string;
+    facebook: string;
+    instagram: string;
     summary: string;
   };
   experience: Experience[];
@@ -47,7 +49,7 @@ export interface PortfolioData {
     period: string;
   };
   certifications: Certification[];
-}
+};
 
 export const portfolioData: PortfolioData = {
   personal: {
@@ -58,6 +60,8 @@ export const portfolioData: PortfolioData = {
     website: "https://fsr.my.id",
     github: "https://github.com/fiqrisr",
     linkedin: "https://linkedin.com/in/fiqrisyahredha",
+    facebook: "https://facebook.com/fiqrisyahredha",
+    instagram: "https://instagram.com/fiqrisyahredha",
     summary:
       "Senior Frontend Engineer with 4+ years of experience architecting high-performance web platforms. Specialized in React/Next.js ecosystems, Docker optimization (83% image reduction), and achieving 90+ Lighthouse scores. Passionate about scalable architecture, monorepo tooling, and mentoring engineering teams.",
   },
@@ -113,8 +117,8 @@ export const portfolioData: PortfolioData = {
         "Developed the Muslim Xplore web application with React.js and Next.js for an international remote team. Accelerated UI delivery by introducing Styled Components and Tailwind CSS in a cross-functional Agile environment.",
     },
     {
-      id: "exp-medika",
-      company: "Medika Digital",
+      id: "exp-mdi",
+      company: "Medika Digitalisasi Indonesia",
       role: "Frontend Developer",
       location: "Pontianak",
       period: "2021 – 2022",

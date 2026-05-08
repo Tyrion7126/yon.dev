@@ -1,9 +1,9 @@
 import type { HTMLAttributes } from "react";
 import { cn } from "../lib/utils";
 
-export interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
+export type BadgeProps = HTMLAttributes<HTMLSpanElement> & {
   variant?: "default" | "primary" | "secondary" | "accent";
-}
+};
 
 const variantStyles: Record<string, string> = {
   default: "bg-bg-base text-black",

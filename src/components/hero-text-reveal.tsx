@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
-interface HeroTextRevealProps {
+type HeroTextRevealProps = {
   name: string;
   role: string;
-}
+};
 
 const lineVariants = {
   hidden: { y: "110%", opacity: 0 },

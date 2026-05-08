@@ -1,10 +1,10 @@
 import { type ButtonHTMLAttributes, forwardRef } from "react";
 import { cn } from "../lib/utils";
 
-export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: "default" | "secondary" | "accent" | "ghost";
   size?: "sm" | "default" | "lg" | "icon";
-}
+};
 
 const variantStyles: Record<string, string> = {
   default: "bg-primary text-black",

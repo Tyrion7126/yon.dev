@@ -5,11 +5,11 @@ const categoryColors = ["bg-primary", "bg-secondary", "bg-accent"];
 
 const getRandomRotation = () => Math.floor(Math.random() * 16 - 8);
 
-interface SkillTagProps {
+type SkillTagProps = {
   skill: string;
   index: number;
   color: string;
-}
+};
 
 const SkillTag = ({ skill, index, color }: SkillTagProps) => {
   const x = useMotionValue(0);
@@ -47,12 +47,12 @@ const SkillTag = ({ skill, index, color }: SkillTagProps) => {
   );
 };
 
-interface SkillCategoryPanelProps {
+type SkillCategoryPanelProps = {
   category: string;
   items: string[];
   colorIndex: number;
   globalIndex: number;
-}
+};
 
 const SkillCategoryPanel = ({
   category,
