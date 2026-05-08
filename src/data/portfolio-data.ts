@@ -63,7 +63,7 @@ export const portfolioData: PortfolioData = {
     facebook: "https://facebook.com/fiqrisyahredha",
     instagram: "https://instagram.com/fiqrisyahredha",
     summary:
-      "Senior Frontend Engineer with 4+ years of experience architecting high-performance web platforms. Specialized in React/Next.js ecosystems, Docker optimization (83% image reduction), and achieving 90+ Lighthouse scores. Passionate about scalable architecture, monorepo tooling, and mentoring engineering teams.",
+      "Senior Frontend Engineer with 4+ years of experience architecting high-performance web platforms. Specialized in React/Next.js ecosystems. Passionate about scalable architecture, monorepo tooling, and mentoring engineering teams.",
   },
   experience: [
     {
