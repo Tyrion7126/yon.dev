@@ -36,7 +36,7 @@ export const HeroTextReveal = ({ name, role }: HeroTextRevealProps) => {
         <motion.h1
           variants={lineVariants}
           transition={{ type: "spring", stiffness: 400, damping: 25 }}
-          className="font-heading text-[clamp(3rem,10vw,8rem)] leading-[1.1] tracking-tighter"
+          className="font-heading text-[clamp(3.5rem,10vw,8rem)] leading-[1.1] tracking-tighter"
         >
           <span className="relative text-border-dark inline-block border-b-[0.15em] border-primary">
             {firstName}
@@ -49,7 +49,7 @@ export const HeroTextReveal = ({ name, role }: HeroTextRevealProps) => {
         <motion.h1
           variants={lineVariants}
           transition={{ type: "spring", stiffness: 400, damping: 25 }}
-          className="font-heading text-[clamp(3rem,10vw,8rem)] leading-[1.1] tracking-tighter"
+          className="font-heading text-[clamp(3.5rem,10vw,8rem)] leading-[1.1] tracking-tighter"
         >
           <span className="relative text-border-dark inline-block border-b-[0.15em] border-accent">
             {lastName}
