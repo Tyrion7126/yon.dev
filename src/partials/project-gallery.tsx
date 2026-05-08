@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Badge } from "../components/badge";
 import { Button } from "../components/button";
@@ -6,6 +6,28 @@ import { Card } from "../components/card";
 import { Dialog, DialogClose, DialogContent } from "../components/dialog";
 import type { Project } from "../data/portfolio-data";
 import { portfolioData } from "../data/portfolio-data";
+
+const gridVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const cardVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 25,
+    },
+  },
+};
 
 export const ProjectGallery = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -96,19 +118,15 @@ export const ProjectGallery = () => {
             {" to close"}
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+            variants={gridVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
             {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: index * 0.1,
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 25,
-                }}
-              >
+              <motion.div key={project.id} variants={cardVariants}>
                 <Card
                   ref={(el) => {
                     cardRefs.current[index] = el;
@@ -137,7 +155,7 @@ export const ProjectGallery = () => {
                 </Card>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           <Dialog open={!!selectedProject} onClose={closeModal}>
             {selectedProject && (

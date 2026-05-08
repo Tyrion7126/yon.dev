@@ -5,13 +5,34 @@ const categoryColors = ["bg-primary", "bg-secondary", "bg-accent"];
 
 const getRandomRotation = () => Math.floor(Math.random() * 16 - 8);
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.04,
+    },
+  },
+};
+
+const tagVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring" as const,
+      stiffness: 300,
+      damping: 20,
+    },
+  },
+};
+
 type SkillTagProps = {
   skill: string;
-  index: number;
   color: string;
 };
 
-const SkillTag = ({ skill, index, color }: SkillTagProps) => {
+const SkillTag = ({ skill, color }: SkillTagProps) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -32,14 +53,7 @@ const SkillTag = ({ skill, index, color }: SkillTagProps) => {
         y,
         rotate: getRandomRotation(),
       }}
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        delay: index * 0.02,
-        type: "spring",
-        stiffness: 300,
-        damping: 20,
-      }}
+      variants={tagVariants}
       className={`${color} border-4 border-black px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] cursor-grab active:cursor-grabbing select-none touch-none`}
     >
       <span className="font-mono text-sm font-bold whitespace-nowrap">{skill}</span>
@@ -51,15 +65,9 @@ type SkillCategoryPanelProps = {
   category: string;
   items: string[];
   colorIndex: number;
-  globalIndex: number;
 };
 
-const SkillCategoryPanel = ({
-  category,
-  items,
-  colorIndex,
-  globalIndex,
-}: SkillCategoryPanelProps) => {
+const SkillCategoryPanel = ({ category, items, colorIndex }: SkillCategoryPanelProps) => {
   const color = categoryColors[colorIndex % categoryColors.length];
 
   return (
@@ -72,13 +80,19 @@ const SkillCategoryPanel = ({
           {items.length}
         </span>
       </div>
-      <div className="bg-bg-base p-4 min-h-[100px] flex-1">
+      <motion.div
+        className="bg-bg-base p-4 min-h-[100px] flex-1"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div className="flex flex-wrap gap-3">
-          {items.map((skill, i) => (
-            <SkillTag key={skill} skill={skill} index={globalIndex + i} color={color} />
+          {items.map((skill) => (
+            <SkillTag key={skill} skill={skill} color={color} />
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -132,18 +146,14 @@ export const SkillsChaos = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skills.map((group, ci) => {
-              const globalIndex = skills.slice(0, ci).reduce((acc, s) => acc + s.items.length, 0);
-              return (
-                <SkillCategoryPanel
-                  key={group.category}
-                  category={group.category}
-                  items={group.items}
-                  colorIndex={ci}
-                  globalIndex={globalIndex}
-                />
-              );
-            })}
+            {skills.map((group, ci) => (
+              <SkillCategoryPanel
+                key={group.category}
+                category={group.category}
+                items={group.items}
+                colorIndex={ci}
+              />
+            ))}
           </div>
 
           <div className="mt-4 text-right font-mono text-[10px] text-black/30 select-none pointer-events-none">
