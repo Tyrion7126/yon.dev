@@ -6,6 +6,7 @@
   --color-secondary: #ffc900;
   --color-accent: #23a094;
   --color-border-dark: #1e1e1e;
+  --color-terminal-bg: #1e1e1e;
 
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -133,6 +134,7 @@
   html.dark {
     --color-bg-base: #1a1a1a;
     --color-border-dark: #f0ede6;
+    --color-secondary: #c99200;
     --shadow-neo-sm: 2px 2px 0px 0px rgba(240, 237, 230, 0.85);
     --shadow-neo-base: 4px 4px 0px 0px rgba(240, 237, 230, 0.85);
     --shadow-neo-lg: 8px 8px 0px 0px rgba(240, 237, 230, 0.85);
@@ -147,30 +149,6 @@
 
   html.dark .border-black {
     border-color: #f0ede6;
-  }
-
-  html.dark .text-black\/20 {
-    color: rgba(240, 237, 230, 0.2);
-  }
-
-  html.dark .text-black\/30 {
-    color: rgba(240, 237, 230, 0.3);
-  }
-
-  html.dark .text-black\/40 {
-    color: rgba(240, 237, 230, 0.4);
-  }
-
-  html.dark .text-black\/60 {
-    color: rgba(240, 237, 230, 0.6);
-  }
-
-  html.dark .border-black\/30 {
-    border-color: rgba(240, 237, 230, 0.3);
-  }
-
-  html.dark .bg-black\/10 {
-    background-color: rgba(240, 237, 230, 0.1);
   }
 
   html.dark .bg-white {
@@ -236,6 +214,27 @@
     }
   }
 
+  /* Bright-colored backgrounds: force dark text so inherited/variable-based colors stay legible */
+  html.dark .bg-primary,
+  html.dark .bg-secondary,
+  html.dark .bg-accent {
+    --color-border-dark: #1e1e1e;
+    color: #1e1e1e;
+  }
+
+  /* Reset text + variable when bg-bg-base is nested inside a bright-colored parent */
+  html.dark .bg-bg-base {
+    --color-border-dark: #f0ede6;
+    color: #f0ede6;
+  }
+
+  /* Period badges on experience cards need light border-dark regardless of card background */
+  html.dark .bg-primary .bg-border-dark,
+  html.dark .bg-secondary .bg-border-dark,
+  html.dark .bg-accent .bg-border-dark {
+    --color-border-dark: #f0ede6;
+  }
+
   /* Raw mode dark overrides */
   html.dark body.raw-mode {
     background-color: #1a1a1a;
@@ -254,5 +253,28 @@
   html.dark body.raw-mode .bg-accent {
     background-color: #1a1a1a;
     color: #f0ede6;
+  }
+
+  /* Preserve raw-mode toggle UI visibility when raw-mode is active */
+  html.dark body.raw-mode .fixed.z-50 {
+    background-color: transparent;
+  }
+
+  html.dark body.raw-mode .fixed.z-50 .bg-bg-base {
+    background-color: #1a1a1a;
+  }
+
+  html.dark body.raw-mode .fixed.z-50 .bg-secondary {
+    background-color: #c99200;
+    color: #1e1e1e;
+  }
+
+  html.dark body.raw-mode .fixed.z-40 {
+    background-color: #1a1a1a;
+  }
+
+  html.dark body.raw-mode .fixed.z-40 .bg-secondary {
+    background-color: #c99200;
+    color: #1e1e1e;
   }
 }

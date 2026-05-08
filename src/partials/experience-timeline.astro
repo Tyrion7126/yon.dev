@@ -5,13 +5,16 @@ const { experience } = portfolioData;
 const bgColors = ["bg-primary", "bg-secondary", "bg-bg-base", "bg-accent"];
 ---
 
-<section id="experience" class="bg-bg-base border-b-4 border-black relative">
+<section
+  id="experience"
+  class="bg-bg-base border-b-4 border-border-dark relative"
+>
   <span
-    class="absolute top-4 left-6 font-mono text-xs text-black/20 select-none pointer-events-none"
+    class="absolute top-4 left-6 font-mono text-xs text-border-dark/20 select-none pointer-events-none"
     >&lt;section id="experience"&gt;</span
   >
   <span
-    class="absolute bottom-4 right-6 font-mono text-xs text-black/20 select-none pointer-events-none"
+    class="absolute bottom-4 right-6 font-mono text-xs text-border-dark/20 select-none pointer-events-none"
     >&lt;/section&gt;</span
   >
 
@@ -19,7 +22,7 @@ const bgColors = ["bg-primary", "bg-secondary", "bg-bg-base", "bg-accent"];
     <div class="max-w-7xl mx-auto w-full">
       <div class="mb-16">
         <span
-          class="font-mono text-xs md:text-sm border-2 border-black px-2 py-1 inline-block bg-bg-base mb-3 md:mb-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+          class="font-mono text-xs md:text-sm border-2 border-border-dark px-2 py-1 inline-block bg-bg-base mb-3 md:mb-4 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
           >FILE_REF: 001</span
         >
         <div class="relative">
@@ -50,22 +53,22 @@ const bgColors = ["bg-primary", "bg-secondary", "bg-bg-base", "bg-accent"];
             >
               {/* Folder Tab */}
               <div class="absolute top-[-2px] left-8 -translate-y-full">
-                <div class="bg-border-dark text-bg-base border-4 border-black border-b-0 px-5 py-2 font-mono text-xs font-bold tracking-wider">
+                <div class="bg-border-dark text-bg-base border-4 border-border-dark border-b-0 px-5 py-2 font-mono text-xs font-bold tracking-wider">
                   {exp.period}
                 </div>
               </div>
 
               {/* Corner alignment markers */}
-              <span class="absolute top-2 left-2 font-mono text-[10px] text-black/20 leading-none select-none pointer-events-none">
+              <span class="absolute top-2 left-2 font-mono text-[10px] text-border-dark/20 leading-none select-none pointer-events-none">
                 +
               </span>
-              <span class="absolute top-2 right-2 font-mono text-[10px] text-black/20 leading-none select-none pointer-events-none">
+              <span class="absolute top-2 right-2 font-mono text-[10px] text-border-dark/20 leading-none select-none pointer-events-none">
                 +
               </span>
-              <span class="absolute bottom-2 left-2 font-mono text-[10px] text-black/20 leading-none select-none pointer-events-none">
+              <span class="absolute bottom-2 left-2 font-mono text-[10px] text-border-dark/20 leading-none select-none pointer-events-none">
                 +
               </span>
-              <span class="absolute bottom-2 right-2 font-mono text-[10px] text-black/20 leading-none select-none pointer-events-none">
+              <span class="absolute bottom-2 right-2 font-mono text-[10px] text-border-dark/20 leading-none select-none pointer-events-none">
                 +
               </span>
 
@@ -73,11 +76,11 @@ const bgColors = ["bg-primary", "bg-secondary", "bg-bg-base", "bg-accent"];
                 {/* Status badge */}
                 <div class="absolute top-4 right-6">
                   {exp.status === "ACTIVE" ? (
-                    <span class="font-mono text-[10px] font-black uppercase px-3 py-1 bg-secondary border-4 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] tracking-widest">
+                    <span class="font-mono text-[10px] font-black uppercase px-3 py-1 bg-secondary border-4 border-border-dark shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] tracking-widest">
                       ACTIVE
                     </span>
                   ) : (
-                    <span class="font-mono text-[10px] font-black uppercase px-3 py-1 bg-bg-base border-4 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] tracking-widest">
+                    <span class="font-mono text-[10px] font-black uppercase px-3 py-1 bg-bg-base border-4 border-border-dark shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] tracking-widest">
                       ARCHIVED
                     </span>
                   )}
@@ -99,7 +102,7 @@ const bgColors = ["bg-primary", "bg-secondary", "bg-bg-base", "bg-accent"];
                   </div>
 
                   {/* Right: Description highlight block */}
-                  <div class="bg-bg-base border-4 border-black p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                  <div class="bg-bg-base border-4 border-border-dark p-5 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                     <p class="text-sm font-body text-border-dark leading-relaxed">
                       {exp.description}
                     </p>

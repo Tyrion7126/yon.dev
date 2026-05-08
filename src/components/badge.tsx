@@ -9,7 +9,7 @@ const variantStyles: Record<string, string> = {
   default: "bg-bg-base text-border-dark",
   primary: "bg-primary text-black",
   secondary: "bg-secondary text-black",
-  accent: "bg-accent text-white",
+  accent: "bg-accent text-black",
 };
 
 export function Badge({ className, variant = "default", ...props }: BadgeProps) {
