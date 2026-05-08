@@ -65,7 +65,7 @@ export const ProjectGallery = () => {
         className="border-y-4 border-black bg-primary overflow-hidden py-4 select-none"
         aria-hidden="true"
       >
-        <div className="flex animate-marquee whitespace-nowrap">
+        <div className="flex animate-marquee md:animate-marquee-slow whitespace-nowrap">
           <span className="font-heading text-[clamp(2rem,5vw,4rem)] font-black italic uppercase tracking-tight text-black">
             {
               "// DEPLOYED ARCHITECTURE // FEATURED WORK // DEPLOYED ARCHITECTURE // FEATURED WORK // DEPLOYED ARCHITECTURE // FEATURED WORK // DEPLOYED ARCHITECTURE // FEATURED WORK // "

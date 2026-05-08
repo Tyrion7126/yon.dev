@@ -1,11 +1,21 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 
+const isTouchDevice = () => {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(pointer: coarse)").matches;
+};
+
 export const CustomCursor = () => {
+  const [isTouch, setIsTouch] = useState(false);
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsTouch(isTouchDevice());
+  }, []);
 
   const springConfig = { damping: 25, stiffness: 400 };
   const x = useSpring(cursorX, springConfig);
@@ -46,7 +56,7 @@ export const CustomCursor = () => {
     };
   }, []);
 
-  if (!isVisible) return null;
+  if (!isVisible || isTouch) return null;
 
   return (
     <motion.div
