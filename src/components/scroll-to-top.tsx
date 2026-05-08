@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 
-export function ScrollToTop() {
+export const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -56,4 +56,4 @@ export function ScrollToTop() {
       </svg>
     </button>
   );
-}
+};
