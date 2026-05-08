@@ -74,8 +74,14 @@ export function SkillsChaos() {
         <div className="max-w-7xl mx-auto w-full">
           <h2 className="sr-only">Skills</h2>
           <div className="flex flex-wrap items-end gap-1 mb-10 select-none">
-            {["S", "K", "I", "L", "L", "S"].map((letter, i) => {
-              if (letter === " ") return <div key={`sp-${i}`} className="w-4" />;
+            {[
+              { char: "S", id: "s1" },
+              { char: "K", id: "k" },
+              { char: "I", id: "i" },
+              { char: "L", id: "l1" },
+              { char: "L", id: "l2" },
+              { char: "S", id: "s2" },
+            ].map(({ char, id }, i) => {
               const colors = ["bg-bg-base", "bg-accent", "bg-primary", "bg-secondary"];
               const rotations = [
                 "-rotate-3",
@@ -87,10 +93,10 @@ export function SkillsChaos() {
               ];
               return (
                 <span
-                  key={`${letter}-${i}`}
+                  key={id}
                   className={`${colors[i % colors.length]} ${rotations[i % rotations.length]} font-heading text-[clamp(1.5rem,5vw,4.5rem)] font-black leading-none border-2 md:border-4 border-black px-2 py-1 md:px-3 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] inline-block`}
                 >
-                  {letter}
+                  {char}
                 </span>
               );
             })}
