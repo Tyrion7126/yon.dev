@@ -3,11 +3,20 @@ import { cn } from "../lib/utils";
 
 export function ScrollToTop() {
   const [visible, setVisible] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 300);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const checkDialogOpen = () => setDialogOpen(document.body.dataset.dialogOpen === "true");
+    checkDialogOpen();
+    const observer = new MutationObserver(checkDialogOpen);
+    observer.observe(document.body, { attributes: true, attributeFilter: ["data-dialog-open"] });
+    return () => observer.disconnect();
   }, []);
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -26,7 +35,9 @@ export function ScrollToTop() {
         "hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px]",
         "active:shadow-none active:translate-x-[4px] active:translate-y-[4px]",
         "focus-visible:outline-3 focus-visible:outline-dashed focus-visible:outline-secondary focus-visible:outline-offset-2",
-        visible ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
+        visible && !dialogOpen
+          ? "opacity-100 pointer-events-auto"
+          : "opacity-0 pointer-events-none",
       )}
     >
       <svg

@@ -23,8 +23,10 @@ const DialogPortal = ({ onClose, children }: { onClose: () => void; children: Re
   useEffect(() => {
     contentRef.current?.focus();
     document.body.style.overflow = "hidden";
+    document.body.dataset.dialogOpen = "true";
     return () => {
       document.body.style.overflow = "";
+      delete document.body.dataset.dialogOpen;
     };
   }, []);
 
@@ -37,7 +39,7 @@ const DialogPortal = ({ onClose, children }: { onClose: () => void; children: Re
 
   return (
     <motion.div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-4 overflow-y-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -54,7 +56,7 @@ const DialogPortal = ({ onClose, children }: { onClose: () => void; children: Re
         animate={{ scale: 1, y: 0, opacity: 1 }}
         exit={{ scale: 0.9, y: 20, opacity: 0 }}
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
-        className="relative z-10"
+        className="relative z-10 my-4 sm:my-0"
       >
         {children}
       </motion.div>
