@@ -1,12 +1,9 @@
 import { motion, useMotionValue } from "framer-motion";
-import { useRef } from "react";
 import { portfolioData } from "../data/portfolio-data";
 
-const tagColors = ["bg-primary", "bg-secondary", "bg-accent", "bg-bg-base"];
+const categoryColors = ["bg-primary", "bg-secondary", "bg-accent"];
 
-const getRandomRotation = () => {
-  return Math.floor(Math.random() * 16 - 8);
-};
+const getRandomRotation = () => Math.floor(Math.random() * 16 - 8);
 
 interface SkillTagProps {
   skill: string;
@@ -35,29 +32,58 @@ const SkillTag = ({ skill, index, color }: SkillTagProps) => {
         y,
         rotate: getRandomRotation(),
       }}
-      initial={{
-        opacity: 0,
-        scale: 0.5,
-      }}
-      animate={{
-        opacity: 1,
-        scale: 1,
-      }}
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{
         delay: index * 0.02,
         type: "spring",
         stiffness: 300,
         damping: 20,
       }}
-      className={`${color} border-4 border-black px-5 py-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] cursor-grab active:cursor-grabbing select-none touch-none`}
+      className={`${color} border-4 border-black px-4 py-2 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] cursor-grab active:cursor-grabbing select-none touch-none`}
     >
       <span className="font-mono text-sm font-bold whitespace-nowrap">{skill}</span>
     </motion.div>
   );
 };
 
+interface SkillCategoryPanelProps {
+  category: string;
+  items: string[];
+  colorIndex: number;
+  globalIndex: number;
+}
+
+const SkillCategoryPanel = ({
+  category,
+  items,
+  colorIndex,
+  globalIndex,
+}: SkillCategoryPanelProps) => {
+  const color = categoryColors[colorIndex % categoryColors.length];
+
+  return (
+    <div className="border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col">
+      <div
+        className={`${color} border-b-4 border-black px-4 py-2 flex items-center justify-between`}
+      >
+        <span className="font-mono text-xs font-bold uppercase tracking-wider">{category}</span>
+        <span className="font-mono text-[10px] text-black/60 border-2 border-black/30 px-2 py-0.5 bg-black/10">
+          {items.length}
+        </span>
+      </div>
+      <div className="bg-bg-base p-4 min-h-[100px] flex-1">
+        <div className="flex flex-wrap gap-3">
+          {items.map((skill, i) => (
+            <SkillTag key={skill} skill={skill} index={globalIndex + i} color={color} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const SkillsChaos = () => {
-  const constraintRef = useRef<HTMLDivElement>(null);
   const { skills } = portfolioData;
   const allItems = skills.flatMap((s) => s.items);
 
@@ -105,24 +131,23 @@ export const SkillsChaos = () => {
             </span>
           </div>
 
-          <div
-            ref={constraintRef}
-            className="relative min-h-[500px] border-4 border-black bg-bg-base shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 overflow-hidden"
-          >
-            <div className="flex flex-wrap gap-4 items-start">
-              {allItems.map((skill, i) => (
-                <SkillTag
-                  key={skill}
-                  skill={skill}
-                  index={i}
-                  color={tagColors[i % tagColors.length]}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {skills.map((group, ci) => {
+              const globalIndex = skills.slice(0, ci).reduce((acc, s) => acc + s.items.length, 0);
+              return (
+                <SkillCategoryPanel
+                  key={group.category}
+                  category={group.category}
+                  items={group.items}
+                  colorIndex={ci}
+                  globalIndex={globalIndex}
                 />
-              ))}
-            </div>
+              );
+            })}
+          </div>
 
-            <div className="absolute bottom-4 right-4 font-mono text-[10px] text-black/30 select-none pointer-events-none">
-              {allItems.length} items · framer-motion physics
-            </div>
+          <div className="mt-4 text-right font-mono text-[10px] text-black/30 select-none pointer-events-none">
+            {allItems.length} items · {skills.length} categories · framer-motion physics
           </div>
         </div>
       </div>
