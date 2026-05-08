@@ -127,4 +127,132 @@
   body.raw-mode .bg-bg-base {
     background-color: white;
   }
+
+  /* ── Dark mode ── */
+
+  html.dark {
+    --color-bg-base: #1a1a1a;
+    --color-border-dark: #f0ede6;
+    --shadow-neo-sm: 2px 2px 0px 0px rgba(240, 237, 230, 0.85);
+    --shadow-neo-base: 4px 4px 0px 0px rgba(240, 237, 230, 0.85);
+    --shadow-neo-lg: 8px 8px 0px 0px rgba(240, 237, 230, 0.85);
+    color-scheme: dark;
+  }
+
+  html.dark body {
+    background-color: #1a1a1a;
+    background-image: radial-gradient(circle, rgba(240, 237, 230, 0.12) 1px, transparent 1px);
+    color: #f0ede6;
+  }
+
+  html.dark .border-black {
+    border-color: #f0ede6;
+  }
+
+  html.dark .text-black\/20 {
+    color: rgba(240, 237, 230, 0.2);
+  }
+
+  html.dark .text-black\/30 {
+    color: rgba(240, 237, 230, 0.3);
+  }
+
+  html.dark .text-black\/40 {
+    color: rgba(240, 237, 230, 0.4);
+  }
+
+  html.dark .text-black\/60 {
+    color: rgba(240, 237, 230, 0.6);
+  }
+
+  html.dark .border-black\/30 {
+    border-color: rgba(240, 237, 230, 0.3);
+  }
+
+  html.dark .bg-black\/10 {
+    background-color: rgba(240, 237, 230, 0.1);
+  }
+
+  html.dark .bg-white {
+    background-color: #1a1a1a;
+  }
+
+  /* Override hardcoded neo-brutalism box shadows */
+  html.dark [class~="shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"] {
+    box-shadow: 2px 2px 0px 0px rgba(240, 237, 230, 0.85);
+  }
+
+  html.dark [class~="shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"],
+  html.dark [class~="shadow-[4px_4px_0px_0px_rgba(30,30,30,1)]"] {
+    box-shadow: 4px 4px 0px 0px rgba(240, 237, 230, 0.85);
+  }
+
+  html.dark [class~="shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"] {
+    box-shadow: 6px 6px 0px 0px rgba(240, 237, 230, 0.85);
+  }
+
+  html.dark [class~="shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"] {
+    box-shadow: 8px 8px 0px 0px rgba(240, 237, 230, 0.85);
+  }
+
+  html.dark [class~="shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]"],
+  html.dark [class~="shadow-[12px_12px_0px_0px_rgba(30,30,30,1)]"] {
+    box-shadow: 12px 12px 0px 0px rgba(240, 237, 230, 0.85);
+  }
+
+  /* Override hover shadow variants */
+  html.dark [class~="hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"]:hover {
+    box-shadow: 2px 2px 0px 0px rgba(240, 237, 230, 0.85);
+  }
+
+  /* Responsive shadow overrides */
+  @media (min-width: 768px) {
+    html.dark [class~="md:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"] {
+      box-shadow: 4px 4px 0px 0px rgba(240, 237, 230, 0.85);
+    }
+
+    html.dark [class~="md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"] {
+      box-shadow: 8px 8px 0px 0px rgba(240, 237, 230, 0.85);
+    }
+  }
+
+  /* -webkit-text-stroke dark mode overrides */
+  html.dark [class~="[-webkit-text-stroke:1px_#1E1E1E]"],
+  html.dark [class~="[&]:[-webkit-text-stroke:1px_#1e1e1e]"] {
+    -webkit-text-stroke: 1px #f0ede6;
+  }
+
+  @media (min-width: 768px) {
+    html.dark [class~="md:[-webkit-text-stroke:2px_#1E1E1E]"],
+    html.dark [class~="md:[&]:[-webkit-text-stroke:2px_#1e1e1e]"] {
+      -webkit-text-stroke: 2px #f0ede6;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    html.dark [class~="lg:[-webkit-text-stroke:3px_#1E1E1E]"],
+    html.dark [class~="lg:[&]:[-webkit-text-stroke:3px_#1e1e1e]"] {
+      -webkit-text-stroke: 3px #f0ede6;
+    }
+  }
+
+  /* Raw mode dark overrides */
+  html.dark body.raw-mode {
+    background-color: #1a1a1a;
+  }
+
+  html.dark body.raw-mode .bg-bg-base {
+    background-color: #1a1a1a;
+  }
+
+  html.dark body.raw-mode .bg-primary,
+  html.dark body.raw-mode .bg-secondary,
+  html.dark body.raw-mode .bg-bg-base {
+    background-color: #1a1a1a;
+  }
+
+  html.dark body.raw-mode .bg-accent {
+    background-color: #1a1a1a;
+    color: #f0ede6;
+  }
 }
