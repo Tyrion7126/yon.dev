@@ -11,17 +11,26 @@ import SeoHead from "../components/seo-head.astro";
 interface Props {
   title: string;
   description: string;
+  keywords?: string[];
+  type?: "website" | "profile";
 }
 
-const { title, description } = Astro.props;
+const { title, description, keywords, type } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<SeoHead title={title} description={description} />
-	</head>
-	<body class="bg-bg-base text-border-dark font-body antialiased overflow-x-hidden">
-		<slot />
-	</body>
+  <head>
+    <SeoHead
+      title={title}
+      description={description}
+      keywords={keywords}
+      type={type}
+    />
+  </head>
+  <body
+    class="bg-bg-base text-border-dark font-body antialiased overflow-x-hidden"
+  >
+    <slot />
+  </body>
 </html>

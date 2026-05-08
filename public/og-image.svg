@@ -1,0 +1,56 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="dots" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1e1e1e" opacity="0.18" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#faf9f6" />
+  <rect width="1200" height="630" fill="url(#dots)" />
+
+  <!-- Outer border -->
+  <rect x="32" y="32" width="1136" height="566" fill="none" stroke="#1e1e1e" stroke-width="4" />
+
+  <!-- SYS.INIT badge — matching hero section style -->
+  <rect x="56" y="56" width="256" height="54" fill="#1e1e1e" />
+  <rect x="52" y="52" width="256" height="54" fill="#faf9f6" stroke="#1e1e1e" stroke-width="4" />
+  <text x="68" y="76" font-family="'JetBrains Mono','Courier New',monospace" font-size="12" font-weight="700" letter-spacing="2" fill="#1e1e1e">[SYS.INIT: JAKARTA, ID]</text>
+  <text x="68" y="95" font-family="'JetBrains Mono','Courier New',monospace" font-size="11" fill="#1e1e1e" opacity="0.45">NODE_ENV=production</text>
+
+  <!-- Pink star — top-right -->
+  <g transform="translate(1062, 44) rotate(15)">
+    <path d="M40 0L46.5 30.5L80 40L46.5 49.5L40 80L33.5 49.5L0 40L33.5 30.5L40 0Z" fill="#ff90e8" stroke="#1e1e1e" stroke-width="4" />
+  </g>
+
+  <!-- Name — single line, 100px -->
+  <text
+    x="90" y="278"
+    font-family="'Space Grotesk',system-ui,sans-serif"
+    font-size="100"
+    font-weight="700"
+    fill="#1e1e1e"
+    letter-spacing="-2">Fiqri Syah Redha</text>
+
+  <!-- Role tag — pink fill, 4px shadow -->
+  <rect x="94" y="330" width="414" height="56" fill="#1e1e1e" />
+  <rect x="90" y="326" width="414" height="56" fill="#ff90e8" stroke="#1e1e1e" stroke-width="4" />
+  <text x="108" y="364" font-family="'Space Grotesk',system-ui,sans-serif" font-size="27" font-weight="700" fill="#1e1e1e">Lead Frontend Engineer</text>
+
+  <!-- Zigzag divider -->
+  <polyline
+    points="90,438 110,424 130,438 150,424 170,438 190,424 210,438 230,424 250,438 270,424 290,438 310,424 330,438 350,424 370,438 390,424 410,438 430,424 450,438 470,424 490,438 510,424 530,438 550,424 570,438 590,424 610,438 630,424 650,438 670,424 690,438 710,424 730,438 750,424 770,438 790,424 810,438 830,424 850,438 870,424 890,438 910,424 930,438 950,424 970,438 990,424 1010,438 1030,424 1050,438 1070,424 1090,438 1110,424"
+    fill="none" stroke="#1e1e1e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Teal circle doodle — bottom-left -->
+  <circle cx="122" cy="510" r="28" fill="#23a094" stroke="#1e1e1e" stroke-width="4" />
+  <circle cx="122" cy="510" r="13" fill="none" stroke="#1e1e1e" stroke-width="3" />
+
+  <!-- Domain — mono, next to circle -->
+  <text x="168" y="519" font-family="'JetBrains Mono','Courier New',monospace" font-size="28" font-weight="700" fill="#1e1e1e">→ fiqri.dev</text>
+
+  <!-- Yellow star — bottom-right -->
+  <g transform="translate(1082, 486) rotate(-10)">
+    <path d="M36 0L41.9 27.4L72 36L41.9 44.6L36 72L30.1 44.6L0 36L30.1 27.4L36 0Z" fill="#ffc900" stroke="#1e1e1e" stroke-width="3.5" />
+  </g>
+</svg>

@@ -52,14 +52,14 @@ export interface PortfolioData {
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Fiqri Syah Redha",
-    role: "Lead Frontend Engineer",
+    role: "Senior Frontend Engineer",
     email: "fiqrisyahredha@gmail.com",
     phone: "+6285932219260",
     website: "https://fsr.my.id",
     github: "https://github.com/fiqrisr",
     linkedin: "https://linkedin.com/in/fiqrisyahredha",
     summary:
-      "Lead Frontend Engineer with 4+ years of experience architecting high-performance web platforms. Specialized in React/Next.js ecosystems, Docker optimization (83% image reduction), and achieving 90+ Lighthouse scores. Passionate about scalable architecture, monorepo tooling, and mentoring engineering teams.",
+      "Senior Frontend Engineer with 4+ years of experience architecting high-performance web platforms. Specialized in React/Next.js ecosystems, Docker optimization (83% image reduction), and achieving 90+ Lighthouse scores. Passionate about scalable architecture, monorepo tooling, and mentoring engineering teams.",
   },
   experience: [
     {
