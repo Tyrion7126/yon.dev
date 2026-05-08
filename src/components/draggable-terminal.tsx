@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { terminalStack } from "../data/portfolio-data";
 
-export function DraggableTerminal() {
+export const DraggableTerminal = () => {
   return (
     <motion.div
       drag
@@ -52,4 +52,4 @@ export function DraggableTerminal() {
       </div>
     </motion.div>
   );
-}
+};

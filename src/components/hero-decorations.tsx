@@ -5,7 +5,7 @@ import {
   HandDrawnArrow,
 } from "./decorative-shapes";
 
-export function HeroDecorations() {
+export const HeroDecorations = () => {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <BrutalistStar className="absolute top-16 right-[25%] hidden lg:block opacity-80" />
@@ -16,4 +16,4 @@ export function HeroDecorations() {
       <div className="absolute bottom-[15%] right-[10%] w-6 h-6 border-4 border-black bg-primary rotate-45 hidden md:block" />
     </div>
   );
-}
+};

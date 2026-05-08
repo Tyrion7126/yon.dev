@@ -1,4 +1,4 @@
-export function SpinningBadge() {
+export const SpinningBadge = () => {
   return (
     <div className="w-28 h-28 md:w-36 md:h-36 animate-spin-slow select-none pointer-events-none">
       <svg
@@ -31,4 +31,4 @@ export function SpinningBadge() {
       </svg>
     </div>
   );
-}
+};

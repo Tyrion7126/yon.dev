@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 
-export function CustomCursor() {
+export const CustomCursor = () => {
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
   const [isHovering, setIsHovering] = useState(false);
@@ -75,4 +75,4 @@ export function CustomCursor() {
       </motion.div>
     </motion.div>
   );
-}
+};

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import { portfolioData } from "../data/portfolio-data";
 
-export function RawModeToggle() {
+export const RawModeToggle = () => {
   const [isRaw, setIsRaw] = useState(false);
 
   const toggle = useCallback(() => {
@@ -61,4 +61,4 @@ export function RawModeToggle() {
       )}
     </>
   );
-}
+};

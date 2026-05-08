@@ -9,15 +9,15 @@ interface DialogProps {
   children: ReactNode;
 }
 
-export function Dialog({ open, onClose, children }: DialogProps) {
+export const Dialog = ({ open, onClose, children }: DialogProps) => {
   return (
     <AnimatePresence>
       {open && <DialogPortal onClose={onClose}>{children}</DialogPortal>}
     </AnimatePresence>
   );
-}
+};
 
-function DialogPortal({ onClose, children }: { onClose: () => void; children: ReactNode }) {
+const DialogPortal = ({ onClose, children }: { onClose: () => void; children: ReactNode }) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -60,9 +60,9 @@ function DialogPortal({ onClose, children }: { onClose: () => void; children: Re
       </motion.div>
     </motion.div>
   );
-}
+};
 
-function DialogOverlay({ onClose }: { onClose: () => void }) {
+const DialogOverlay = ({ onClose }: { onClose: () => void }) => {
   return (
     <motion.div
       className="absolute inset-0 bg-black/80 backdrop-blur-sm"
@@ -73,7 +73,7 @@ function DialogOverlay({ onClose }: { onClose: () => void }) {
       role="presentation"
     />
   );
-}
+};
 
 interface DialogContentProps {
   children: ReactNode;
@@ -81,7 +81,7 @@ interface DialogContentProps {
   accent?: string;
 }
 
-export function DialogContent({ children, className, accent }: DialogContentProps) {
+export const DialogContent = ({ children, className, accent }: DialogContentProps) => {
   return (
     <div
       className={cn(
@@ -95,14 +95,14 @@ export function DialogContent({ children, className, accent }: DialogContentProp
       {children}
     </div>
   );
-}
+};
 
 interface DialogCloseProps {
   onClose: () => void;
   className?: string;
 }
 
-export function DialogClose({ onClose, className }: DialogCloseProps) {
+export const DialogClose = ({ onClose, className }: DialogCloseProps) => {
   return (
     <button
       type="button"
@@ -122,4 +122,4 @@ export function DialogClose({ onClose, className }: DialogCloseProps) {
       <X size={28} strokeWidth={3} />
     </button>
   );
-}
+};

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export function BrutalistStar({ className = "" }: { className?: string }) {
+export const BrutalistStar = ({ className = "" }: { className?: string }) => {
   return (
     <motion.svg
       animate={{ rotate: 360 }}
@@ -24,9 +24,9 @@ export function BrutalistStar({ className = "" }: { className?: string }) {
       />
     </motion.svg>
   );
-}
+};
 
-export function BrutalistStarLarge({ className = "" }: { className?: string }) {
+export const BrutalistStarLarge = ({ className = "" }: { className?: string }) => {
   return (
     <motion.svg
       animate={{ rotate: -360 }}
@@ -50,9 +50,9 @@ export function BrutalistStarLarge({ className = "" }: { className?: string }) {
       />
     </motion.svg>
   );
-}
+};
 
-export function HandDrawnArrow({ className = "" }: { className?: string }) {
+export const HandDrawnArrow = ({ className = "" }: { className?: string }) => {
   return (
     <svg
       className={className}
@@ -80,9 +80,9 @@ export function HandDrawnArrow({ className = "" }: { className?: string }) {
       />
     </svg>
   );
-}
+};
 
-export function ZigzagLine({ className = "" }: { className?: string }) {
+export const ZigzagLine = ({ className = "" }: { className?: string }) => {
   return (
     <svg
       className={className}
@@ -102,9 +102,9 @@ export function ZigzagLine({ className = "" }: { className?: string }) {
       />
     </svg>
   );
-}
+};
 
-export function CircleDoodle({ className = "" }: { className?: string }) {
+export const CircleDoodle = ({ className = "" }: { className?: string }) => {
   return (
     <motion.svg
       animate={{ scale: [1, 1.05, 1] }}
@@ -124,4 +124,4 @@ export function CircleDoodle({ className = "" }: { className?: string }) {
       <circle cx="30" cy="30" r="12" stroke="black" strokeWidth="3" fill="none" />
     </motion.svg>
   );
-}
+};

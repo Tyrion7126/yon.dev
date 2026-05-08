@@ -20,7 +20,7 @@ const containerVariants = {
   },
 };
 
-export function HeroTextReveal({ name, role }: HeroTextRevealProps) {
+export const HeroTextReveal = ({ name, role }: HeroTextRevealProps) => {
   const [firstName, ...rest] = name.split(" ");
   const lastName = rest.join(" ");
 
@@ -32,7 +32,7 @@ export function HeroTextReveal({ name, role }: HeroTextRevealProps) {
       className="relative wrap-break-word"
     >
       {/* First name — highlight tape on pink */}
-      <div className="overflow-hidden -mb-1 md:mb-[-1rem]">
+      <div className="overflow-hidden -mb-1 md:-mb-4">
         <motion.h1
           variants={lineVariants}
           transition={{ type: "spring", stiffness: 400, damping: 25 }}
@@ -69,4 +69,4 @@ export function HeroTextReveal({ name, role }: HeroTextRevealProps) {
       </div>
     </motion.div>
   );
-}
+};

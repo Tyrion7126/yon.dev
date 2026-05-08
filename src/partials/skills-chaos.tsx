@@ -4,9 +4,9 @@ import { portfolioData } from "../data/portfolio-data";
 
 const tagColors = ["bg-primary", "bg-secondary", "bg-accent", "bg-bg-base"];
 
-function getRandomRotation() {
+const getRandomRotation = () => {
   return Math.floor(Math.random() * 16 - 8);
-}
+};
 
 interface SkillTagProps {
   skill: string;
@@ -14,7 +14,7 @@ interface SkillTagProps {
   color: string;
 }
 
-function SkillTag({ skill, index, color }: SkillTagProps) {
+const SkillTag = ({ skill, index, color }: SkillTagProps) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -54,9 +54,9 @@ function SkillTag({ skill, index, color }: SkillTagProps) {
       <span className="font-mono text-sm font-bold whitespace-nowrap">{skill}</span>
     </motion.div>
   );
-}
+};
 
-export function SkillsChaos() {
+export const SkillsChaos = () => {
   const constraintRef = useRef<HTMLDivElement>(null);
   const { skills } = portfolioData;
   const allItems = skills.flatMap((s) => s.items);
@@ -128,4 +128,4 @@ export function SkillsChaos() {
       </div>
     </section>
   );
-}
+};

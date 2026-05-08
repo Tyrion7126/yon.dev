@@ -7,7 +7,7 @@ import { Dialog, DialogClose, DialogContent } from "../components/dialog";
 import type { Project } from "../data/portfolio-data";
 import { portfolioData } from "../data/portfolio-data";
 
-export function ProjectGallery() {
+export const ProjectGallery = () => {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -179,4 +179,4 @@ export function ProjectGallery() {
       </div>
     </section>
   );
-}
+};
