@@ -143,6 +143,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "lampu-ai",
       title: "Lampu AI Marketplace",
+      link: "https://lampu.ai",
       shortDescription:
         "A B2B AI Marketplace managing architecture and release cycles for Buyer and Seller platforms.",
       fullDescription:
@@ -162,17 +163,6 @@ export const portfolioData: PortfolioData = {
       themeColor: "#FF90E8",
     },
     {
-      id: "nekotoko-pos",
-      title: "NekoToko POS Microservices",
-      link: "https://github.com/fiqrisr/nekotoko",
-      shortDescription:
-        "A scalable Point of Sale system built on microservices with RabbitMQ and Nx Monorepo.",
-      fullDescription:
-        "Architected a scalable Point of Sale (POS) system using a Microservices pattern within an Nx Monorepo. Orchestrated asynchronous communication between NestJS services using RabbitMQ message brokers. Managed complex data relationships and persistence using PostgreSQL and Prisma ORM.",
-      techStack: ["React", "Nest.js", "PostgreSQL", "RabbitMQ", "Nx Monorepo"],
-      themeColor: "#FFC900",
-    },
-    {
       id: "dealls-portal",
       title: "Dealls Job Portal",
       link: "https://dealls.com/",
@@ -182,6 +172,39 @@ export const portfolioData: PortfolioData = {
         "Collaborated on building a job portal platform used by over 100,000 users, creating scalable frontend components that enhanced usability. Participated in product releases and code reviews with 5 frontend engineers, maintaining high code quality standards. Led the development of multiple key features, translating product requirements into technical implementations.",
       techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
       themeColor: "#FF6B6B",
+    },
+    {
+      id: "kantorku-hris",
+      title: "KantorKu HRIS",
+      link: "https://kantorku.id/",
+      shortDescription:
+        "Indonesia's all-in-one HRIS platform trusted by 5,000+ companies, with payroll, attendance, and HR automation.",
+      fullDescription:
+        "Contributed to the development of KantorKu, Indonesia's all-in-one HRIS platform trusted by 5,000+ companies across various industries. Built scalable frontend features including automated payroll processing with PPh21 and BPJS calculation, GPS-validated attendance tracking, leave management, reimbursement workflows, and Employee Self Service modules. Leveraged Next.js rendering strategies for optimal performance and collaborated closely with cross-functional teams to deliver a seamless HR management experience for businesses of all sizes.",
+      techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      themeColor: "#4F46E5",
+    },
+    {
+      id: "muslim-explore",
+      title: "MuslimExplore",
+      link: "https://muslimxplore.com/",
+      shortDescription:
+        "An all-in-one Islamic lifestyle platform with prayer times, Hadith, and halal location discovery.",
+      fullDescription:
+        "Developed the public-facing web platform for MuslimExplore, an all-in-one Islamic lifestyle app serving Muslims globally. Built features including global prayer time lookup, a Hadith browser spanning major collections (Sahih al-Bukhari, Sahih Muslim, Abu Dawood, and more), and a halal restaurant and meat shop discovery tool. Used Next.js with Tailwind CSS to deliver a performant, ad-free experience.",
+      techStack: ["Next.js", "Tailwind CSS"],
+      themeColor: "#22C55E",
+    },
+    {
+      id: "nekotoko-pos",
+      title: "NekoToko POS Microservices",
+      link: "https://github.com/fiqrisr/nekotoko",
+      shortDescription:
+        "A scalable Point of Sale system built on microservices with RabbitMQ and Nx Monorepo.",
+      fullDescription:
+        "Architected a scalable Point of Sale (POS) system using a Microservices pattern within an Nx Monorepo. Orchestrated asynchronous communication between NestJS services using RabbitMQ message brokers. Managed complex data relationships and persistence using PostgreSQL and Prisma ORM.",
+      techStack: ["React", "Nest.js", "PostgreSQL", "RabbitMQ", "Nx Monorepo"],
+      themeColor: "#FFC900",
     },
   ],
   skills: [
