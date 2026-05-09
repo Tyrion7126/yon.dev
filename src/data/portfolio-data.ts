@@ -37,6 +37,7 @@ export type PortfolioData = {
     linkedin: string;
     facebook: string;
     instagram: string;
+    x: string;
     summary: string;
   };
   experience: Experience[];
@@ -62,6 +63,7 @@ export const portfolioData: PortfolioData = {
     linkedin: "https://linkedin.com/in/fiqrisyahredha",
     facebook: "https://facebook.com/fiqrisyahredha",
     instagram: "https://instagram.com/fiqrisyahredha",
+    x: "https://x.com/fiqrisyahredha",
     summary:
       "Senior Frontend Engineer with 4+ years of experience architecting high-performance web platforms. Specialized in React/Next.js ecosystems. Passionate about scalable architecture, monorepo tooling, and mentoring engineering teams.",
   },

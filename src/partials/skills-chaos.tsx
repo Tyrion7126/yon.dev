@@ -140,7 +140,7 @@ export const SkillsChaos = () => {
                 </span>
               );
             })}
-            <span className="font-mono text-xs border-4 border-black bg-bg-base px-3 py-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] ml-4 self-center">
+            <span className="mt-2 md:mt-0 font-mono text-xs border-4 border-black bg-bg-base px-3 py-2 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] ml-4 self-center">
               DRAG TO REARRANGE
             </span>
           </div>

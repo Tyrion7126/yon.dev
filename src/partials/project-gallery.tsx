@@ -99,7 +99,7 @@ export const ProjectGallery = () => {
 
       <div className="py-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto w-full">
-          <p className="text-sm font-mono text-border-dark/70 mb-12">
+          <p className="text-sm font-mono text-border-dark/70 mb-12 hidden md:block">
             <kbd className="px-1.5 py-0.5 border-2 border-black bg-bg-base shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] text-xs">
               j
             </kbd>
