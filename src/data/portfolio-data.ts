@@ -57,7 +57,7 @@ export const portfolioData: PortfolioData = {
     role: "Senior Frontend Engineer",
     email: "fiqrisyahredha@gmail.com",
     phone: "+6285932219260",
-    website: "https://fsr.my.id",
+    website: "https://fiqri.dev",
     github: "https://github.com/fiqrisr",
     linkedin: "https://linkedin.com/in/fiqrisyahredha",
     facebook: "https://facebook.com/fiqrisyahredha",
@@ -228,6 +228,10 @@ export const portfolioData: PortfolioData = {
     {
       category: "Databases",
       items: ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM"],
+    },
+    {
+      category: "Testing",
+      items: ["Jest", "Vitest", "Cypress"],
     },
     {
       category: "Concepts",
