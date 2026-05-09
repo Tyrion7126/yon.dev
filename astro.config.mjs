@@ -15,6 +15,9 @@ export default defineConfig({
     favicons({
       name: "Fiqri Syah Redha",
       short_name: "Fiqri",
+      input: {
+        favicons: ["public/favicon.png"],
+      },
     }),
   ],
   vite: {
