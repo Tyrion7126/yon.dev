@@ -81,7 +81,7 @@ export const ProjectGallery = () => {
   }, [activeIndex, selectedProject, openModal, closeModal]);
 
   return (
-    <section id="projects" className="bg-bg-base border-b-4 border-black">
+    <section id="projects" className="bg-horizontal-lines border-b-4 border-black">
       {/* Industrial Marquee Heading */}
       <div
         className="border-y-4 border-black bg-primary overflow-hidden py-4 select-none"

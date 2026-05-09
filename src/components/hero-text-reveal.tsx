@@ -31,27 +31,18 @@ export const HeroTextReveal = ({ name, role }: HeroTextRevealProps) => {
       animate="visible"
       className="relative wrap-break-word"
     >
-      {/* First name — highlight tape on pink */}
-      <div className="overflow-hidden -mb-1 md:-mb-4">
-        <motion.h1
-          variants={lineVariants}
-          transition={{ type: "spring", stiffness: 400, damping: 25 }}
-          className="font-heading text-[clamp(3.5rem,10vw,8rem)] leading-[1.1] tracking-tighter"
-        >
-          <span className="relative text-border-dark inline-block border-b-[0.15em] border-primary">
-            {firstName}
-          </span>
-        </motion.h1>
-      </div>
-
-      {/* Last name — solid white block, overlapping */}
+      {/* Name — single h1 with styled spans */}
       <div className="overflow-hidden mb-3 md:mb-4">
         <motion.h1
           variants={lineVariants}
           transition={{ type: "spring", stiffness: 400, damping: 25 }}
-          className="font-heading text-[clamp(3.5rem,10vw,8rem)] leading-[1.1] tracking-tighter"
+          className="font-heading text-[clamp(3.5rem,10vw,8rem)] leading-[1.1] tracking-tighter flex flex-col"
+          aria-label={`${firstName} ${lastName}`}
         >
-          <span className="relative text-border-dark inline-block border-b-[0.15em] border-accent">
+          <span className="relative text-border-dark w-fit inline-block border-b-[0.15em] border-primary -mb-1 md:-mb-4">
+            {firstName}
+          </span>
+          <span className="relative text-border-dark w-fit inline-block border-b-[0.15em] border-accent">
             {lastName}
           </span>
         </motion.h1>

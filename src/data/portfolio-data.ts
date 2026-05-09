@@ -69,7 +69,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "exp-lintasarta",
       company: "Lintasarta",
-      role: "Frontend Engineer",
+      role: "Software Engineer",
       location: "Jakarta",
       period: "2024 – PRESENT",
       status: "ACTIVE",
@@ -109,7 +109,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "exp-unfold",
       company: "Unfold Solution",
-      role: "Frontend Developer",
+      role: "Web Developer",
       location: "Melbourne (Remote)",
       period: "2022 – 2023",
       status: "ARCHIVED",
@@ -129,7 +129,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "exp-kst",
       company: "Kita Super Tim",
-      role: "Frontend Developer",
+      role: "Web Developer",
       location: "Pontianak",
       period: "2020 – 2021",
       status: "ARCHIVED",

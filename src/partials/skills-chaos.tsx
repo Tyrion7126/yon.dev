@@ -102,7 +102,7 @@ export const SkillsChaos = () => {
   const allItems = skills.flatMap((s) => s.items);
 
   return (
-    <section id="skills" className="bg-secondary border-b-4 border-black relative">
+    <section id="skills" className="bg-diagonal-stripes border-b-4 border-black relative">
       <div className="absolute top-4 left-6 font-mono text-xs text-black/40 select-none pointer-events-none">
         {'<section id="skills">'}
       </div>
@@ -122,7 +122,7 @@ export const SkillsChaos = () => {
               { char: "L", id: "l2" },
               { char: "S", id: "s2" },
             ].map(({ char, id }, i) => {
-              const colors = ["bg-bg-base", "bg-accent", "bg-primary", "bg-secondary"];
+              const colors = ["bg-secondary", "bg-accent", "bg-primary", "bg-bg-base"];
               const rotations = [
                 "-rotate-3",
                 "rotate-2",
