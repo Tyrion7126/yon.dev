@@ -141,13 +141,23 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
+      id: "lampu-ai",
+      title: "Lampu AI Marketplace",
+      shortDescription:
+        "A B2B AI Marketplace managing architecture and release cycles for Buyer and Seller platforms.",
+      fullDescription:
+        "Led frontend architecture for the AI Marketplace at Lintasarta, managing release cycles for both Buyer and Seller platforms. Pioneered SonarQube integration in CI/CD, optimized Docker builds by 83% (3GB to 500MB), reduced CSS bundle size by 30%, and achieved Rank #1 SEO for key business keywords. Architected state management with TanStack Query, reducing API server load by 40%, and integrated Midtrans and Xendit payment gateways for high-volume secure transactions.",
+      techStack: ["React", "Next.js", "TypeScript", "TanStack Query", "Docker", "SonarQube"],
+      themeColor: "#23A094",
+    },
+    {
       id: "prasasti-center",
       title: "Prasasti Center",
       link: "https://prasasticenter.com",
       shortDescription:
-        "A multilingual public-facing web platform with a custom CMS and 90+ Lighthouse scores.",
+        "A public-facing web platform for a non-profit government organization with a custom CMS and 90+ Lighthouse scores.",
       fullDescription:
-        "Architected and developed a public-facing, multilingual web platform using Next.js, seamlessly integrating it with a custom in-house CMS for dynamic content delivery. Engineered high-performance web pages utilizing Next.js rendering strategies (SSR/SSG) and core web vitals optimization, achieving a 90+ Lighthouse score across Performance, Accessibility, and SEO metrics. Collaborated closely with the backend team to design and consume custom API schemas, ensuring robust data integration and a seamless user experience.",
+        "Architected and developed a public-facing web platform for a non-profit government organization using Next.js, seamlessly integrating it with a custom in-house CMS for dynamic content delivery. The CMS features blog pages powered by a WYSIWYG editor, enabling non-technical staff to manage content with ease. Engineered high-performance web pages utilizing Next.js rendering strategies (SSR/SSG) and core web vitals optimization, achieving a 90+ Lighthouse score across Performance, Accessibility, and SEO metrics. Collaborated closely with the backend team to design and consume custom API schemas, ensuring robust data integration and a seamless user experience.",
       techStack: ["Next.js", "TypeScript", "Custom CMS"],
       themeColor: "#FF90E8",
     },
@@ -163,18 +173,9 @@ export const portfolioData: PortfolioData = {
       themeColor: "#FFC900",
     },
     {
-      id: "lampu-ai",
-      title: "Lampu AI Marketplace",
-      shortDescription:
-        "A B2B AI Marketplace managing architecture and release cycles for Buyer and Seller platforms.",
-      fullDescription:
-        "Led frontend architecture for the AI Marketplace at Lintasarta, managing release cycles for both Buyer and Seller platforms. Pioneered SonarQube integration in CI/CD, optimized Docker builds by 83% (3GB to 500MB), reduced CSS bundle size by 30%, and achieved Rank #1 SEO for key business keywords. Architected state management with TanStack Query, reducing API server load by 40%, and integrated Midtrans and Xendit payment gateways for high-volume secure transactions.",
-      techStack: ["React", "Next.js", "TypeScript", "TanStack Query", "Docker", "SonarQube"],
-      themeColor: "#23A094",
-    },
-    {
       id: "dealls-portal",
       title: "Dealls Job Portal",
+      link: "https://dealls.com/",
       shortDescription:
         "A high-traffic job portal used by 100,000+ users with scalable frontend architecture.",
       fullDescription:

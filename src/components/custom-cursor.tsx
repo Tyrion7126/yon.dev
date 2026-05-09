@@ -50,23 +50,21 @@ export const CustomCursor = () => {
   }, [handleMouseMove]);
 
   useEffect(() => {
-    const handleHoverStart = () => setIsHovering(true);
-    const handleHoverEnd = () => setIsHovering(false);
+    const selector = 'a, button, [role="button"], [tabindex="0"]';
 
-    const interactiveElements = document.querySelectorAll(
-      'a, button, [role="button"], [tabindex="0"]',
-    );
+    const handleMouseOver = (e: MouseEvent) => {
+      if ((e.target as Element).closest(selector)) setIsHovering(true);
+    };
+    const handleMouseOut = (e: MouseEvent) => {
+      if ((e.target as Element).closest(selector)) setIsHovering(false);
+    };
 
-    for (const el of interactiveElements) {
-      el.addEventListener("mouseenter", handleHoverStart);
-      el.addEventListener("mouseleave", handleHoverEnd);
-    }
+    document.addEventListener("mouseover", handleMouseOver);
+    document.addEventListener("mouseout", handleMouseOut);
 
     return () => {
-      for (const el of interactiveElements) {
-        el.removeEventListener("mouseenter", handleHoverStart);
-        el.removeEventListener("mouseleave", handleHoverEnd);
-      }
+      document.removeEventListener("mouseover", handleMouseOver);
+      document.removeEventListener("mouseout", handleMouseOut);
     };
   }, []);
 

@@ -185,10 +185,10 @@ export const ProjectGallery = () => {
                 <div className="flex gap-4 flex-wrap">
                   {selectedProject.link && (
                     <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
-                      <Button variant="default">View Live ↗</Button>
+                      <Button variant="secondary">View Live ↗</Button>
                     </a>
                   )}
-                  <Button variant="secondary">GitHub Repo →</Button>
+                  {/* <Button variant="secondary">GitHub Repo →</Button> */}
                 </div>
               </DialogContent>
             )}
