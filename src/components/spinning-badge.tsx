@@ -10,7 +10,14 @@ export const SpinningBadge = () => {
         <defs>
           <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
         </defs>
-        <circle cx="100" cy="100" r="90" fill="#FFC900" stroke="currentColor" strokeWidth="6" />
+        <circle
+          cx="100"
+          cy="100"
+          r="90"
+          fill="var(--color-secondary)"
+          stroke="currentColor"
+          strokeWidth="6"
+        />
         <circle
           cx="100"
           cy="100"
