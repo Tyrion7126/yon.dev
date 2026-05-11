@@ -54,18 +54,18 @@ export type PortfolioData = {
 
 export const portfolioData: PortfolioData = {
   personal: {
-    name: "Fiqri Syah Redha",
-    role: "Senior Frontend Engineer",
-    email: "fiqrisyahredha@gmail.com",
-    phone: "+6285932219260",
-    website: "https://fiqri.dev",
-    github: "https://github.com/fiqrisr",
+    name: "Yon",
+    role: "Python Developer",
+    email: "wigunayoga6@gmail.com",
+    phone: "+62895359794842",
+    website: "https://yoonions.vercel.app",
+    github: "https://github.com/Tyrion7126",
     linkedin: "https://linkedin.com/in/fiqrisyahredha",
     facebook: "https://facebook.com/fiqrisyahredha",
     instagram: "https://instagram.com/fiqrisyahredha",
     x: "https://x.com/fiqrisyahredha",
     summary:
-      "Senior Frontend Engineer with 4+ years of experience architecting high-performance web platforms. Specialized in React/Next.js ecosystems. Passionate about scalable architecture, monorepo tooling, and mentoring engineering teams.",
+      "A Backend-focused Developer with a deep interest in automation and system logic. My primary playground is Python, where I build custom Discord bots designed for efficient community management and enhanced user interaction.",
   },
   experience: [
     {
@@ -203,73 +203,34 @@ export const portfolioData: PortfolioData = {
         "A scalable Point of Sale system built on microservices with RabbitMQ and Nx Monorepo.",
       fullDescription:
         "Architected a scalable Point of Sale (POS) system using a Microservices pattern within an Nx Monorepo. Orchestrated asynchronous communication between NestJS services using RabbitMQ message brokers. Managed complex data relationships and persistence using PostgreSQL and Prisma ORM.",
-      techStack: ["React", "Nest.js", "PostgreSQL", "RabbitMQ", "Nx Monorepo"],
+      techStack: ["React", "PostgreSQL"],
       themeColor: "#FFC900",
     },
   ],
   skills: [
     {
       category: "Languages",
-      items: ["TypeScript", "JavaScript (ES6+)", "Node.js", "SQL", "GraphQL"],
+      items: ["TypeScript", "JavaScript (ES6+)", "Node.js", "SQL", "Python"],
     },
     {
       category: "Frontend Frameworks",
       items: ["React.js", "Next.js", "Angular", "Vue.js", "Nuxt.js", "Storybook", "Astro"],
     },
     {
-      category: "State & Data",
-      items: ["Zustand", "Jotai", "TanStack Query", "Redux", "NgRx"],
-    },
-    {
       category: "Backend Frameworks",
-      items: ["Nest.js", "Express.js", "Elysia.js"],
+      items: ["Express.js"],
     },
     {
       category: "Styling",
       items: [
         "Tailwind CSS",
         "Styled Components",
-        "Material UI",
-        "Ant Design",
-        "CSS3",
-        "Bootstrap",
-      ],
-    },
-    {
-      category: "Tools & DevOps",
-      items: [
-        "Docker",
-        "Git",
-        "Nx Monorepo",
-        "moonrepo",
-        "proto",
-        "SonarQube",
-        "CI/CD",
-        "Windsurf",
-        "Webpack",
-        "Vite",
-        "Lighthouse",
+        "Material UI"
       ],
     },
     {
       category: "Databases",
-      items: ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM"],
-    },
-    {
-      category: "Testing",
-      items: ["Jest", "Vitest", "Cypress"],
-    },
-    {
-      category: "Concepts",
-      items: [
-        "Core Web Vitals",
-        "SEO",
-        "Microservices",
-        "Monorepo Architecture",
-        "Server-Side Rendering (SSR)",
-        "PWA",
-        "RESTful API",
-      ],
+      items: ["PostgreSQL", "SQLite", "Prisma ORM"],
     },
   ],
   education: {
