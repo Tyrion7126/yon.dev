@@ -170,42 +170,6 @@ export const portfolioData: PortfolioData = {
       items: ["SQLite", "Prisma ORM"],
     },
   ],
-  education: {
-    university: "Universitas Tanjungpura",
-    degree: "Bachelor of Computer Science",
-    location: "Pontianak",
-    period: "2018 – 2022",
-  },
-  certifications: [
-    {
-      id: "cert-1",
-      title: "Become a Front-End Web Developer Expert",
-      issuer: "Dicoding",
-      date: "Dec 2020",
-      credentialLink: "https://dicoding.com/certificates/81P21VQEJZOY",
-    },
-    {
-      id: "cert-2",
-      title: "Build Progressive Web Apps",
-      issuer: "Dicoding",
-      date: "Jul 2020",
-      credentialLink: "https://dicoding.com/certificates/N72ZD1NVLXYW",
-    },
-    {
-      id: "cert-3",
-      title: "Learn Front-End Web Development Fundamentals",
-      issuer: "Dicoding",
-      date: "Jun 2020",
-      credentialLink: "https://dicoding.com/certificates/2RVZKV3E4XD5",
-    },
-    {
-      id: "cert-4",
-      title: "Learn SOLID Programming Principles",
-      issuer: "Dicoding",
-      date: "Jun 2020",
-      credentialLink: "https://dicoding.com/certificates/GMEPJ4D9JZ3V",
-    },
-  ],
 };
 
 export const terminalStack: string[] = [
