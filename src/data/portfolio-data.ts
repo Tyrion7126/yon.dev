@@ -87,6 +87,16 @@ export const portfolioData: PortfolioData = {
       description:
         "Built small applications with React.js and Next.js. Implementing API integration for complex bot management.",
     },
+    {
+      id: "exp-vector-artist",
+      company: "Freelancing",
+      role: "Vector Artist",
+      location: "Jakarta",
+      period: "2022 – 2023",
+      status: "ARCHIVED",
+      description:
+        "Focused on faces portrait tracing, I utilize Infinite Design to trace facial features into scalable vector art. This process transforms human references into clean, high-resolution, ensuring professional clarity and sharp linework."
+    },
   ],
   projects: [
     {
