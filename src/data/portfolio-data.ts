@@ -64,7 +64,7 @@ export const portfolioData: PortfolioData = {
     instagram: "https://www.instagram.com/12yonn_",
     discord: "https://discord.com/users/521681056576045067",
     summary:
-      "A Backend-focused Developer with a deep interest in automation and system logic. My primary playground is Python, where I build custom Discord bots designed for efficient community management and enhanced user interaction.",
+      "A Backend-focused Developer with a deep interest in automation and system logic. My primary playground is Python, where I build customized Discord bots designed for efficient community management and enhanced user interaction.",
   },
   experience: [
     {
