@@ -116,7 +116,7 @@ export const portfolioData: PortfolioData = {
       title: "Ethical Labs",
       link: "https://discord.gg/aXucTWVBky",
       shortDescription:
-        "An automated modding community bot for role based subscriptions, image manipulation for dynamic welcomer images.",
+        "An automated modding community bot, featuring role-based subscriptions, sticky roles (persistent upon rejoins), unique welcome cards on the fly.",
       fullDescription:
         "An automated modding community bot, featuring role-based subscriptions, sticky roles (persistent upon rejoins), unique welcome cards on the fly.",
       techStack: ["Pillow", "Python", "SQLite", "Py-cord"],
