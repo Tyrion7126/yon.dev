@@ -62,7 +62,7 @@ export const portfolioData: PortfolioData = {
     github: "https://github.com/Tyrion7126",
     facebook: "https://www.facebook.com/yogii.wgna.13",
     instagram: "https://www.instagram.com/12yonn_",
-    discord: "",
+    discord: "https://discord.com/users/521681056576045067",
     summary:
       "A Backend-focused Developer with a deep interest in automation and system logic. My primary playground is Python, where I build custom Discord bots designed for efficient community management and enhanced user interaction.",
   },
