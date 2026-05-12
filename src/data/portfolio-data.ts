@@ -109,18 +109,18 @@ export const portfolioData: PortfolioData = {
       fullDescription:
         "A robust economy bot featuring chat leveling, lotteries, anonymous confessions, and tools like giveaways. Scaled to 1,000+ users.",
       techStack: ["Pillow", "Python", "SQLite", "Py-cord"],
-      themeColor: "#23A094",
+      themeColor: "#FF6B6B",
     },
     {
       id: "ethical-labs",
       title: "Ethical Labs",
       link: "https://discord.gg/aXucTWVBky",
       shortDescription:
-        "An automated modding community bot, featuring role-based subscriptions, sticky roles (persistent upon rejoins), unique welcome cards on the fly.",
+        "All-in-one modding community bot, featuring role-based subscriptions, sticky roles (persistent upon rejoins), unique welcome cards on the fly.",
       fullDescription:
-        "An automated modding community bot, featuring role-based subscriptions, sticky roles (persistent upon rejoins), unique welcome cards on the fly.",
+        "All-in-one modding community bot, featuring role-based subscriptions, sticky roles (persistent upon rejoins), unique welcome cards on the fly.",
       techStack: ["Pillow", "Python", "SQLite", "Py-cord"],
-      themeColor: "#23A094",
+      themeColor: "#4F46E5",
     },
     {
       id: "the-finals-indonesia",
@@ -131,7 +131,7 @@ export const portfolioData: PortfolioData = {
       fullDescription:
         "Integrated webhooks donation via Trakteer API, complemented by temporary voice rooms and interaction-based role automation.",
       techStack: ["Trakteer API", "Python", "SQLite", "Py-cord"],
-      themeColor: "#23A094",
+      themeColor: "#FF90E8",
     }
   ],
   skills: [
