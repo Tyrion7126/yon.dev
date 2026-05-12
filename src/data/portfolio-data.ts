@@ -75,7 +75,7 @@ export const portfolioData: PortfolioData = {
       period: "2023 – PRESENT",
       status: "ACTIVE",
       description:
-        "Crafting full-stack Discord bots designed to automate community growth through automated server management and engagement-focused economy systems. Includes developing Flask microservices that bridge the Discord gateway with external web applications for seamless data integration.",
+        "Crafting full-stack Discord bots designed to drive community growth through automated server management and engagement-focused economy systems. Includes developing Flask microservices that bridge the Discord gateway with external web applications for seamless data integration.",
     },
     {
       id: "exp-web-developer",
