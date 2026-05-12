@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fiqri.dev/sitemap-index.xml
+Sitemap: https://yoonion.vercel.app/sitemap-index.xml

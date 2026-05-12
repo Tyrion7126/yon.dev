@@ -8,13 +8,13 @@ import favicons from "astro-favicons";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fiqri.dev",
+  site: "https://yoonion.vercel.app/",
   integrations: [
     react(),
     sitemap(),
     favicons({
-      name: "Fiqri Syah Redha",
-      short_name: "Fiqri",
+      name: "Yon",
+      short_name: "Yon",
       input: {
         favicons: ["public/favicon.png"],
       },
