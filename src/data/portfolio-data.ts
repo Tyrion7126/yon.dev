@@ -60,8 +60,9 @@ export const portfolioData: PortfolioData = {
     phone: "+62895359794842",
     website: "https://yoonions.vercel.app",
     github: "https://github.com/Tyrion7126",
-    facebook: "https://facebook.com/fiqrisyahredha",
-    instagram: "https://instagram.com/fiqrisyahredha",
+    facebook: "https://www.facebook.com/yogii.wgna.13",
+    instagram: "https://www.instagram.com/12yonn_",
+    discord: "",
     summary:
       "A Backend-focused Developer with a deep interest in automation and system logic. My primary playground is Python, where I build custom Discord bots designed for efficient community management and enhanced user interaction.",
   },
@@ -91,7 +92,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "horizone",
       title: "Horizone",
-      link: "https://lampu.ai",
+      link: "https://discord.gg/DhUcc9XszT",
       shortDescription:
         "Curse of Aros community bot featuring real-time EXP tracking, temporary voice, and music streaming via Lavalink.",
       fullDescription:
@@ -102,7 +103,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "nawanggiandra",
       title: "Nawanggiandra",
-      link: "https://lampu.ai",
+      link: "https://discord.gg/ph7zhm6QjT",
       shortDescription:
         "A robust economy bot featuring chat leveling, lotteries, anonymous confessions, and tools like giveaways. Scaled to 1,000+ users.",
       fullDescription:
@@ -113,18 +114,18 @@ export const portfolioData: PortfolioData = {
     {
       id: "ethical-labs",
       title: "Ethical Labs",
-      link: "https://lampu.ai",
+      link: "https://discord.gg/aXucTWVBky",
       shortDescription:
         "An automated modding community bot for role based subscriptions, image manipulation for dynamic welcomer images.",
       fullDescription:
-        "An automated modding community bot for role based subscriptions, image manipulation for dynamic welcomer images.",
+        "An automated modding community bot, featuring role-based subscriptions, sticky roles (persistent upon rejoins), unique welcome cards on the fly.",
       techStack: ["Pillow", "Python", "SQLite", "Py-cord"],
       themeColor: "#23A094",
     },
     {
       id: "the-finals-indonesia",
       title: "The Finals Indonesia",
-      link: "https://lampu.ai",
+      link: "https://discord.gg/the-finals-indonesia-1182566874505035837",
       shortDescription:
         "Integrated webhooks donation via Trakteer API, complemented by temporary voice rooms and interaction-based role automation.",
       fullDescription:
