@@ -55,7 +55,7 @@ export type PortfolioData = {
 export const portfolioData: PortfolioData = {
   personal: {
     name: "Yon",
-    role: "Python Developer",
+    role: "Backend Developer",
     email: "wigunayoga6@gmail.com",
     phone: "+62895359794842",
     website: "https://yoonions.vercel.app",
