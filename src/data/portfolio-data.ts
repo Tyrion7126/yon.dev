@@ -74,7 +74,7 @@ export const portfolioData: PortfolioData = {
       period: "2023 – PRESENT",
       status: "ACTIVE",
       description:
-        "Crafting full-stack Discord bots designed to automate community growth through automated server management and engagement-focused Economy systems. Includes developing Flask microservices that bridge the Discord gateway with external web applications for seamless data integration.",
+        "Crafting full-stack Discord bots designed to automate community growth through automated server management and engagement-focused economy systems. Includes developing Flask microservices that bridge the Discord gateway with external web applications for seamless data integration.",
     },
     {
       id: "exp-web-developer",
@@ -95,8 +95,8 @@ export const portfolioData: PortfolioData = {
       shortDescription:
         "Curse of Aros community bot featuring real-time EXP tracking, temporary voice, and music streaming via Lavalink.",
       fullDescription:
-        "Led frontend architecture for the AI Marketplace at Lintasarta, managing release cycles for both Buyer and Seller platforms. Pioneered SonarQube integration in CI/CD, optimized Docker builds by 83% (3GB to 500MB), reduced CSS bundle size by 30%, and achieved Rank #1 SEO for key business keywords. Architected state management with TanStack Query, reducing API server load by 40%, and integrated Midtrans and Xendit payment gateways for high-volume secure transactions.",
-      techStack: ["Python", "SQLite", "Py-cord"],
+        "Curse of Aros community bot featuring real-time EXP tracking, temporary voice, and music streaming via Lavalink.",
+      techStack: ["Lavalink", "Flask", "Python", "SQLite"],
       themeColor: "#23A094",
     },
     {
@@ -104,10 +104,10 @@ export const portfolioData: PortfolioData = {
       title: "Nawanggiandra",
       link: "https://lampu.ai",
       shortDescription:
-        "Engineered a robust economy system featuring chat leveling, lotteries, anonymous confessions, and tools like giveaways. Scaled to 1,000+ users.",
+        "A robust economy bot featuring chat leveling, lotteries, anonymous confessions, and tools like giveaways. Scaled to 1,000+ users.",
       fullDescription:
-        "Led frontend architecture for the AI Marketplace at Lintasarta, managing release cycles for both Buyer and Seller platforms. Pioneered SonarQube integration in CI/CD, optimized Docker builds by 83% (3GB to 500MB), reduced CSS bundle size by 30%, and achieved Rank #1 SEO for key business keywords. Architected state management with TanStack Query, reducing API server load by 40%, and integrated Midtrans and Xendit payment gateways for high-volume secure transactions.",
-      techStack: ["Python", "SQLite", "Py-cord"],
+        "A robust economy bot featuring chat leveling, lotteries, anonymous confessions, and tools like giveaways. Scaled to 1,000+ users.",
+      techStack: ["Pillow", "Python", "SQLite", "Py-cord"],
       themeColor: "#23A094",
     },
     {
@@ -117,8 +117,8 @@ export const portfolioData: PortfolioData = {
       shortDescription:
         "An automated modding community bot for role based subscriptions, image manipulation for dynamic welcomer images.",
       fullDescription:
-        "Led frontend architecture for the AI Marketplace at Lintasarta, managing release cycles for both Buyer and Seller platforms. Pioneered SonarQube integration in CI/CD, optimized Docker builds by 83% (3GB to 500MB), reduced CSS bundle size by 30%, and achieved Rank #1 SEO for key business keywords. Architected state management with TanStack Query, reducing API server load by 40%, and integrated Midtrans and Xendit payment gateways for high-volume secure transactions.",
-      techStack: ["Python", "SQLite", "Py-cord"],
+        "An automated modding community bot for role based subscriptions, image manipulation for dynamic welcomer images.",
+      techStack: ["Pillow", "Python", "SQLite", "Py-cord"],
       themeColor: "#23A094",
     },
     {
@@ -128,8 +128,8 @@ export const portfolioData: PortfolioData = {
       shortDescription:
         "Integrated webhooks donation via Trakteer API, complemented by temporary voice rooms and interaction-based role automation.",
       fullDescription:
-        "Led frontend architecture for the AI Marketplace at Lintasarta, managing release cycles for both Buyer and Seller platforms. Pioneered SonarQube integration in CI/CD, optimized Docker builds by 83% (3GB to 500MB), reduced CSS bundle size by 30%, and achieved Rank #1 SEO for key business keywords. Architected state management with TanStack Query, reducing API server load by 40%, and integrated Midtrans and Xendit payment gateways for high-volume secure transactions.",
-      techStack: ["Python", "SQLite", "Py-cord"],
+        "Integrated webhooks donation via Trakteer API, complemented by temporary voice rooms and interaction-based role automation.",
+      techStack: ["Trakteer API", "Python", "SQLite", "Py-cord"],
       themeColor: "#23A094",
     }
   ],
