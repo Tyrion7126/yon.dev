@@ -95,7 +95,7 @@ export const portfolioData: PortfolioData = {
       period: "2022 – 2023",
       status: "ARCHIVED",
       description:
-        "Focused on faces portrait tracing, I utilize Infinite Design to trace facial features into scalable vector art. This process transforms human references into clean, high-resolution, ensuring professional clarity and sharp linework."
+        "Focused on faces portrait tracing, I utilize Infinite Design to trace facial features into scalable vector art. This process transforms human references into clean linework."
     },
   ],
   projects: [
