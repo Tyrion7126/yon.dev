@@ -130,7 +130,7 @@ export const portfolioData: PortfolioData = {
       fullDescription:
         "All-in-one modding community bot, featuring role-based subscriptions, sticky roles (persistent upon rejoins), unique welcome cards on the fly.",
       techStack: ["Pillow", "Python", "SQLite", "Py-cord"],
-      themeColor: "#4F46E5",
+      themeColor: "#FFC900",
     },
     {
       id: "the-finals-indonesia",
