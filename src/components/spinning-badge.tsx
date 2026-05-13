@@ -40,7 +40,7 @@ export const SpinningBadge = () => {
           fontWeight="bold"
           fill="currentColor"
         >
-          FSR
+          YON
         </text>
       </svg>
     </div>
