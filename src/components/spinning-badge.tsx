@@ -5,7 +5,7 @@ export const SpinningBadge = () => {
         viewBox="0 0 200 200"
         className="w-full h-full"
         role="img"
-        aria-label="4+ years experience badge"
+        aria-label="python experience badge"
       >
         <defs>
           <path id="circlePath" d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0" />
@@ -28,7 +28,7 @@ export const SpinningBadge = () => {
         />
         <text className="font-mono" fontSize="14" fontWeight="bold" fill="currentColor">
           <textPath href="#circlePath" startOffset="0%">
-            4+ YEARS EXPERIENCE • DEPLOYING SCALE • ZERO COMPROMISE •
+            PYTHON SPECIALIST • DEPLOYING SCALE • ZERO COMPROMISE •
           </textPath>
         </text>
         <text
