@@ -104,10 +104,10 @@ export const portfolioData: PortfolioData = {
       title: "Horizone",
       link: "https://discord.gg/DhUcc9XszT",
       shortDescription:
-        "Curse of Aros community bot featuring real-time EXP tracking, temporary voice, and music streaming via Lavalink.",
+        "Curse of Aros community bot featuring fullstack real-time EXP tracking, temporary voice, and music streaming via Lavalink.",
       fullDescription:
-        "Curse of Aros community bot featuring real-time EXP tracking, temporary voice, and music streaming via Lavalink.",
-      techStack: ["Lavalink", "Flask", "Python", "SQLite"],
+        "Curse of Aros community bot featuring fullstack real-time EXP tracking, temporary voice, and music streaming via Lavalink.",
+      techStack: ["Lavalink", "Vue", "Elysia.js", "Python", "PostgreSQL"],
       themeColor: "#23A094",
     },
     {
