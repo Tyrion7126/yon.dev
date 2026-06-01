@@ -107,7 +107,7 @@ export const portfolioData: PortfolioData = {
         "Curse of Aros community bot featuring fullstack real-time EXP tracking, temporary voice, and music streaming via Lavalink.",
       fullDescription:
         "Curse of Aros community bot featuring fullstack real-time EXP tracking, temporary voice, and music streaming via Lavalink.",
-      techStack: ["Lavalink", "Vue", "Elysia.js", "Python", "PostgreSQL"],
+      techStack: ["Vue", "Elysia.js", "Python", "PostgreSQL"],
       themeColor: "#23A094",
     },
     {
